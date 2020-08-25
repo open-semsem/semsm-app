@@ -1,0 +1,198 @@
+@keyframes "App-logo-spin" {
+	from {
+		transform: rotate(0deg);
+	}
+	to {
+		transform: rotate(360deg);
+	}
+}
+.App {
+	text-align: center;
+}
+.App-logo {
+	height: 40vmin;
+	pointer-events: none;
+}
+.App-header {
+	background-color: #282c34;
+	min-height: 100vh;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	font-size: calc(10px + 2vmin);
+	color: white;
+}
+.App-link {
+	color: #61dafb;
+}
+@media (prefers-reduced-motion: no-preference) {
+	.App-logo {
+		animation: App-logo-spin infinite 20s linear;
+	}
+}
+.menu_uj {
+    position: fixed;
+    width: 619px;
+    height: 95px;
+    left: 1190px;
+    top: 0px;
+    display: none;
+    overflow: visible;
+  }
+  .menu-main-rec {
+    fill: transparent;
+  }
+  .menu-rec {
+    // position: absolute;
+    // overflow: visible;
+    // width: 619px;
+    // height: 95px;
+ 
+  }
+.menu-item{
+	white-space: nowrap;
+	text-align: left;
+	position: absolute;
+    overflow: visible;
+    font-family: Poppins;
+    font-style: normal;
+    // font-weight: bold;
+    font-size: 16px;
+    color: rgba(255,255,255,1);
+    letter-spacing: 1.34px;
+    // text-decoration: underline;
+    text-transform: uppercase;
+}
+.logo {
+	top: 83px;
+	left: 124px;
+	width: 90px;
+	height: 79px;
+	opacity: 1;
+}
+// body 
+.home-body{
+	top: -27.799346923828125px;
+left: 434px;
+width: 1513px;
+height: 1230px;
+background: transparent linear-gradient(309deg, #360018 0%, #EB3B49 100%) 0% 0% no-repeat padding-box;
+opacity: 1;
+}
+body, html {
+    height: 100%;
+    margin: 0;
+}
+
+.App {
+    height: 100vh;
+    background-size: cover;
+	background-repeat: no-repeat;
+	
+    background-position: top center;
+}
+
+.App-content {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 40px;
+}
+
+@media (min-width: 650px ) {
+    .App {
+        background-position: center center;
+    }
+    .footerBase {
+        background-position: center center;
+    }
+
+    .App-content {
+        align-items: flex-end;
+        justify-content: center;
+    }
+}
+footer{
+	background-color: white;
+	.footerBase{
+		// height: 100vh;
+		width: 100%;
+		//background-size: contain;
+		background-repeat: no-repeat;
+		
+		background-position: top center;
+	}
+}
+nav{
+	float: right;
+	margin-top: 1%;
+    margin-right: 10%;
+	// width: 40%;
+	background-color: transparent;
+	ul{
+		margin: 0;
+		padding: 0;
+		display: flex ;
+		li{
+			list-style-type: none;  
+			padding: 20px;
+			width: fit-content;
+			/*when I specify 2 values to margin, the first one is for the top and bottom side, the second for the left and right side*/
+			margin: 0 2vw;
+			.link{
+				text-decoration: none;
+				
+				/*below I changed the color*/
+				color: rgba(255,255,255,1);
+				/*I added some padding*/
+				// padding:0 2vw;
+				/*also changed the font family but that's totally irrelevant*/
+ 				letter-spacing: 1.34px;
+				&:hover{
+					background-color: #ad0c2f;
+					
+				
+					// text-decoration: underline;
+				  } 
+			}
+		  }
+	  }
+  }
+
+ 
+ 
+ 
+  @media only screen and (max-width: 500px) {
+	/*shows elements in a column*/
+	ul{
+	  flex-direction: column;
+	}
+	
+	/* deletes margin on top or bottom of the a tag*/
+	li{
+	  margin: 0;
+	}
+   /* makes sure that the a tag will take the entire screen*/
+	a{
+	  display: block;
+	}
+	button{
+		/*makes the button visible*/
+		display: block;
+		
+		/*since we are here, we can style it a little bit!*/
+		padding: 2vw;
+		font-size: 3vh;
+		background-color: #AFE0FF;
+		border: none;
+		
+		/*outline none removes the default blue border that appears anytime you click on the button*/
+		outline: none;
+		
+		cursor: pointer;
+	  }
+  }
+ 
