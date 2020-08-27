@@ -5,7 +5,10 @@
     createChatBotMessage
   } from "react-chatbot-kit";
   import SemsmAvatar from "../semsm-avatar";
-
+  import {
+    BotService
+  } from "../../services/bot.service";
+  const callBot = new BotService()
   // MessageParser starter code
   class MessageParser {
     constructor(actionProvider, state) {
@@ -13,18 +16,25 @@
       this.state = state;
     }
 
-    parse = (message) => {
-      const lowerCase = message.toLowerCase();
+    parse = async (message) => {
+      // const lowerCase = message.toLowerCase();
 
-      if (
-        lowerCase.includes("messageparser") ||
-        lowerCase.includes("parse") ||
-        lowerCase.includes("parser") ||
-        lowerCase.includes("message parser")
-      ) {
-        return this.actionProvider.handleMessageParser();
+      // if (
+      //   lowerCase.includes("messageparser") ||
+      //   lowerCase.includes("parse") ||
+      //   lowerCase.includes("parser") ||
+      //   lowerCase.includes("message parser")
+      // ) {
+      //   return this.actionProvider.handleMessageParser();
+      // }
+      // return this.actionProvider.handleDefault();
+      const reply = await callBot.sendMessage(message)
+      console.log(reply, 'reply ');
+      if (reply.status==200) {
+        return this.actionProvider.handleBotReply(reply.data.message);
+      } else {
+        return this.actionProvider.handleDefault();
       }
-      return this.actionProvider.handleDefault();
     };
 
     // call the bot api here then push the result to bot state 
@@ -48,7 +58,16 @@
   
       this.addMessageToBotState(messages);
     };
-  
+    handleBotReply = (message) => {
+      const messages = this.createChatBotMessage(
+        message, {
+          widget: "messageParser",
+          withAvatar: true
+        }
+      );
+
+      this.addMessageToBotState(messages);
+    };
     handleDefault = () => {
       const message = this.createChatBotMessage("How can I help?", {
         withAvatar: true,
