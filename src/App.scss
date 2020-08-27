@@ -1,4 +1,3 @@
-
 @keyframes "App-logo-spin" {
 	from {
 		transform: rotate(0deg);
@@ -70,10 +69,27 @@
 	font-style: normal;
 	// font-weight: bold;
 	font-size: 16px;
-	color: rgba(255, 255, 255, 1);
+	color: rgba(255, 255, 255, 1) !important;
 	letter-spacing: 1.34px;
 	// text-decoration: underline;
 	text-transform: uppercase;
+}
+
+.menu-item2 {
+	white-space: nowrap;
+	text-align: left;
+	position: absolute;
+	overflow: visible;
+
+	// text-decoration: underline;
+	text-transform: uppercase;
+	color: var(--unnamed-color-d53934);
+	text-align: left;
+	font: normal normal normal 16px/25px Poppins;
+	letter-spacing: 2.14px;
+	color: #D53934 !important;
+	text-transform: uppercase;
+	opacity: 1;
 }
 
 .logo {
@@ -142,12 +158,13 @@ html {
 	text-align: center;
 	font: normal normal medium 16px/25px Poppins;
 	letter-spacing: 0px;
-	color: #FFFFFF;
+	color: #FFFFFF !important;
+	text-decoration: none !important;
 
 }
 
 .hrf {
-	color: #FFFFFF;
+	color: #FFFFFF !important;
 }
 
 .open-semsm-box {
@@ -234,3 +251,5 @@ footer {
 
 @import "nav";
 @import "bot";
+@import "offers";
+@import "prices";

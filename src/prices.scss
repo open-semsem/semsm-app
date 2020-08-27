@@ -1,0 +1,99 @@
+.body {
+    background: #F9E1E1;
+    color: #42495B;
+}
+
+.pagTitle {
+    color: #E17674 ;
+    // padding-left: 20%;
+    text-align: center;
+    font: normal normal normal 20px/27px Lobster!important;
+    letter-spacing: 0px;
+    //color: #D53934;
+}
+
+.pagSubTitle {
+    // padding-left: 20%;
+    text-align: center;
+    font: normal normal 600 50px/76px Poppins!important;
+    letter-spacing: 0px;
+    color: #42495B;
+    opacity: 1;
+}
+
+.details {
+    text-align: center !important;
+    font: normal normal 300 16px/25px Poppins !important;
+    letter-spacing: 0px !important;
+    color: #7A839E !important;
+    opacity: 1 !important;
+    padding: 5% !important;
+}
+
+.card {
+    // margin-top: 30% !important;
+    padding: 5% !important;
+    //opacity: 1!important;
+
+
+}
+
+.detailsBtn {
+    background: #D53D34 !important;
+    box-shadow: 0px 3px 6px #7E76F929 !important;
+    border-radius: 26px !important;
+    opacity: 1;
+    left: 30%;
+
+
+}
+
+.detailsBtnOutline {
+    border: 1px solid var(--unnamed-color-d53934) !important;
+    border: 1px solid #D53934 !important;
+    border-radius: 26px !important;
+    opacity: 1;
+    left: 30%;
+
+
+}
+
+.detailsBtnText {
+    text-align: center !important;
+    font: normal normal medium 16px/25px Poppins !important;
+    letter-spacing: 0px;
+    color: #FFFFFF !important;
+    opacity: 1;
+
+
+}
+
+.detailsBtnOutlineText {
+    text-align: center !important;
+    font: normal normal medium 16px/25px Poppins !important;
+    letter-spacing: 0px;
+    color: #42495B !important;
+    opacity: 1;
+
+
+}
+
+.price {
+    color: var(--unnamed-color-d53934);
+    text-align: center !important;
+    font: normal normal 600 30px/46px Poppins !important;
+    letter-spacing: 0px;
+    color: #D53934;
+    opacity: 1 !important;
+}
+
+.title {
+    text-align: center !important;
+    font: normal normal normal 28px/37px Lobster !important;
+    letter-spacing: 0px !important;
+    color: #42495B !important;
+    opacity: 1 !important;
+    // margin-bottom: 5% !important;
+
+
+}

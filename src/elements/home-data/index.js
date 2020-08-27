@@ -46,10 +46,8 @@ function index() {
                     <IconButton>test</IconButton> */}
                 </Grid>
                 <Grid item xs={6} zeroMinWidth className="home-text">
-                    <Typography variant="subtitle1" align="left" color="textSecondary" component="p">
-                        Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat
-        </Typography>
-                    <button className="home-data-btn" > <Link to="/Semsm" className="">
+                    <Typography variant="subtitle1" align="left" color="textSecondary" component="p"> Semsm is an AI assistant for fast prototyping your business idea into a blockchain application.</Typography>
+                    <button className="home-data-btn" > <Link to="/Semsm" className="hrf">
                         GET A FREE PROTOTYPE </Link></button>
                 </Grid>
 
