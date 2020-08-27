@@ -1,13 +1,13 @@
-import React from 'react'
-import { makeStyles } from '@material-ui/core/styles';
-import { Grid, AppBar, Link } from '@material-ui/core';
+import React,{Fragment} from 'react'
+ import { Grid,  Link } from '@material-ui/core';
+const logoUrl = require('../../assets/pic/logo.png');
 
 
 // list of items
 const list = [
   { name: 'HOME',url:"Home" },
   { name: 'SEMSM',url:"Semsm" },
-  { name: 'SERVICES',url:"Service" },
+  { name: 'SERVICES',url:'Services' },
   { name: 'PRICES',url:"Prices" },
   { name: 'CONTACT',url:"Subscribe" }
   
@@ -22,7 +22,11 @@ const list = [
 const index = () => {
   return (
     // <nav> <ul> <button> 🞬 </button> <li> <a> About Me </a> </li> <li> <a> Projects </a> </li> <li> <a> CV </a> </li> <li> <a> Contacts </a> </li> </ul> </nav>
-    <nav className="menu-main-rec">
+<Fragment>
+
+
+<Grid item>
+<nav className="menu-main-rec">
       <ul className="menu-rec"
       >
         {list.map((menuItem, key) =>
@@ -34,6 +38,15 @@ const index = () => {
 
       </ul>
     </nav>
+</Grid>
+<Grid  item >
+            <img className="logo"
+                    alt="Semsm"
+                    src={logoUrl}
+                    
+                />
+            </Grid>
+</Fragment>
   );
 };
 export default index;

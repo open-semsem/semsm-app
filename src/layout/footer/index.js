@@ -34,8 +34,9 @@ export default function Footer(props) {
 
   return (
     <footer className={classes.footer}>
+              <div  className="footerBase" style={{backgroundImage: `url(${imageUrl}) ` }}>
+
       <Container maxWidth="lg" >
-        <div  className="footerBase" style={{backgroundImage: `url(${imageUrl}) ` }}>
   <Typography variant="h6" align="center" gutterBottom>
           {title}
         </Typography>
@@ -44,9 +45,10 @@ export default function Footer(props) {
         </Typography>
         <Copyright />
 
-        </div>
+      
       
       </Container>
+      </div>
     </footer>
   );
 }

@@ -66,8 +66,8 @@ const Routes = () => {
                   '/Services',
                   '/Semsm',
                   '/Prices',
-                  'Subscribe',
-                  'Chat'
+                  '/Subscribe',
+                  '/Chat'
               
                 ]}>
                <Switch location={location} key={location.pathname}>
@@ -78,7 +78,7 @@ const Routes = () => {
                     variants={pageVariants}
                     transition={pageTransition}>
                         <Route path="/Semsm" component={Semsm} />
-                      <Route path="/Service" component={Offers} />
+                      <Route path="/Services" component={Offers} />
                       <Route path="/Prices" component={Prices} />
                       <Route path="/Chat" component={ChatBot} />
                       <Route path="/Subscribe" component={Subscribe} />
