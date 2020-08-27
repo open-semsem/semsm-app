@@ -7,7 +7,7 @@ import { HomeText } from '../../elements';
 const imageUrl = require('../../assets/pic/Home@2x.png');
 export default function index() {
     return (
-        <div className="App" style={{ backgroundImage: `url(${imageUrl}) ` }}>
+        <div className="App-background" style={{ backgroundImage: `url(${imageUrl}) ` }}>
 
 <Header />
             <Grid container item xs={8}  className="menu-rec" >
