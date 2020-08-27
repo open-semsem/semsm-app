@@ -64,7 +64,7 @@ const offers=[
     <Grid container className={classes.root , `body`} spacing={2}>
    
       <Grid item xs={12}>
-      <Header />
+      <Header isWhite={true}/>
         <Grid container justify="center" spacing={spacing}>
      <Grid item xs={6} >   <div className="pagTitle">
      Pricing

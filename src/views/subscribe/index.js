@@ -9,7 +9,10 @@ export default function index() {
         
         </Grid>
         <Grid item xs={6}  calssName="menu_uj">
-        <Header/>
+        <Header isWhite={true}/>
+        </Grid>
+        <Grid container item>
+        <h1>Under Construction </h1>
         </Grid>
         </div>
     )
