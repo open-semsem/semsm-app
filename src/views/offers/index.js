@@ -87,7 +87,7 @@ const offers=[
 
         <Grid container justify="center" spacing={spacing}  >
           {offers.map((value) => (
-            <Grid key={value} item  >
+            <Grid key={value.src} item  >
               <Paper className={classes.paper} >
          <div >
         <img className="cardIcon" src={require(`../../assets/pic/${value.src}`)}/>

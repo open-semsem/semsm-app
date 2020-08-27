@@ -40,17 +40,17 @@ const index = ({isWhite} ) => {
           </ul>
         </nav>
       </Grid>
-     <Grid item >
-     {!isWhite &&
+      {!isWhite &&  <Grid item >
+    
          <img className="logo"
          alt="Semsm"
          src={logoUrl}
 
        />
         
-      }
+     
       </Grid>
-  
+   }
      
     </Fragment>
   );
