@@ -86,7 +86,7 @@ const offers=[
             <Grid key={value.src} item  >
               <Paper className={classes.paper} >
          <div >
-        <img className="cardIcon" src={require(`../../assets/pic/${value.src}`)}/>
+        <img className="cardIcon" src={require(`../../assets/pic/${value.src}`)} alt={value.title}/>
          </div>
           <div>
           <p className="details" >
