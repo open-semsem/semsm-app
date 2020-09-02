@@ -1,4 +1,4 @@
-import React, { lazy, Suspense } from 'react';
+import React, {  Suspense } from 'react';
 import { Switch, Route, Redirect, useLocation } from 'react-router-dom';
 import { AnimatePresence, motion } from 'framer-motion';
 import {Home,Semsm,Offers,Prices,ChatBot,Subscribe} from '../views'

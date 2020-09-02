@@ -1,8 +1,6 @@
-import React, { Fragment } from 'react';
-import logo from './logo.svg';
+import React from 'react';
 import './App.scss';
 import { makeStyles } from '@material-ui/core/styles';
-import Paper from '@material-ui/core/Paper';
 import Grid from '@material-ui/core/Grid';
 import { BrowserRouter } from 'react-router-dom';
 import Routes from './routes';

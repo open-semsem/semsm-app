@@ -1,5 +1,5 @@
-import React, { Fragment } from 'react';
-import { Grid, Paper, Typography, IconButton } from '@material-ui/core';
+import React from 'react';
+import { Grid,  Typography, IconButton } from '@material-ui/core';
 import { Link } from 'react-router-dom';
 const twitter = require('../../assets/pic/twitter.svg');
 const facebook = require('../../assets/pic/facebook.svg');
