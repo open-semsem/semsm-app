@@ -1,27 +1,27 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "e604625a8b5929285a8daba4d4537cc0",
+    "revision": "68d8227d27a979c136ec2f7b8d80c9c0",
     "url": "/semsm-app/index.html"
   },
   {
-    "revision": "2cd4e35071ca873b3bfc",
+    "revision": "953eb2023f3e3311d16a",
     "url": "/semsm-app/static/css/2.7dcd0153.chunk.css"
   },
   {
-    "revision": "380a6dbcf4ca190f8155",
+    "revision": "8b64ba2955f9a3bbdee1",
     "url": "/semsm-app/static/css/main.a450569b.chunk.css"
   },
   {
-    "revision": "2cd4e35071ca873b3bfc",
-    "url": "/semsm-app/static/js/2.c0bc9f5b.chunk.js"
+    "revision": "953eb2023f3e3311d16a",
+    "url": "/semsm-app/static/js/2.8aba2d65.chunk.js"
   },
   {
     "revision": "882fee5ad56cfd78b1cc5d94b617aa42",
-    "url": "/semsm-app/static/js/2.c0bc9f5b.chunk.js.LICENSE.txt"
+    "url": "/semsm-app/static/js/2.8aba2d65.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "380a6dbcf4ca190f8155",
-    "url": "/semsm-app/static/js/main.9ea48018.chunk.js"
+    "revision": "8b64ba2955f9a3bbdee1",
+    "url": "/semsm-app/static/js/main.c49a88a3.chunk.js"
   },
   {
     "revision": "ee23d63a37d1124305e3",
