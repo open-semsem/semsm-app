@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/semsm-app/precache-manifest.774db1484b4bb0d15c77b75e938d039a.js"
+  "/semsm-app/precache-manifest.b88f355ba70166f60771ce16c946400b.js"
 );
 
 self.addEventListener('message', (event) => {

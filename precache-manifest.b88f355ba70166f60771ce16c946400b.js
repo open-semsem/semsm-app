@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "64198f3efddb7a7f7b989cbf72ff2f48",
+    "revision": "e604625a8b5929285a8daba4d4537cc0",
     "url": "/semsm-app/index.html"
   },
   {
@@ -8,7 +8,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/semsm-app/static/css/2.7dcd0153.chunk.css"
   },
   {
-    "revision": "3ef375c2031790f017e0",
+    "revision": "380a6dbcf4ca190f8155",
     "url": "/semsm-app/static/css/main.a450569b.chunk.css"
   },
   {
@@ -20,8 +20,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/semsm-app/static/js/2.c0bc9f5b.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "3ef375c2031790f017e0",
-    "url": "/semsm-app/static/js/main.1b8c6abe.chunk.js"
+    "revision": "380a6dbcf4ca190f8155",
+    "url": "/semsm-app/static/js/main.9ea48018.chunk.js"
   },
   {
     "revision": "ee23d63a37d1124305e3",
