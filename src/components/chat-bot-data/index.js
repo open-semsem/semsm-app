@@ -30,6 +30,7 @@
       // return this.actionProvider.handleDefault();
       const reply = await callBot.sendMessage(message)
       console.log(reply, 'reply ');
+      // eslint-disable-next-line eqeqeq
       if (reply.status==200) {
         return this.actionProvider.handleBotReply(reply.data.message);
       } else {
