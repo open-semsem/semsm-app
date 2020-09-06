@@ -12,8 +12,7 @@ import {
 
 
 export default function Pricing() {
-  const [] = React.useState(2);
-
+ 
   const offers = [{
     title: "Start Version",
     message: "Free box for ERC20 & ERC721 token",
