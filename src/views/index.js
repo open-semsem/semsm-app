@@ -1,6 +1,0 @@
-export { default as Home } from './home'
-export { default as Subscribe } from './subscribe'
-export { default as Offers } from './offers'
-export { default as Prices } from './prices'
-export { default as ChatBot } from './chatbot'
-export { default as Semsm } from './openSemsm'

@@ -1,0 +1,20 @@
+@mixin navbar-color($color){
+    background-color: $color;
+    float: right;
+}
+
+@mixin center-item(){
+    left: 0;
+    right: 0;
+    float: right;
+
+    margin-right: auto;
+    margin-left: auto;
+    position: absolute;
+}
+.logo {
+
+	width: 50%;
+
+	// opacity: 1;
+}
