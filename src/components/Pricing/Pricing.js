@@ -22,13 +22,13 @@ export default function Pricing() {
   {
     title: "Mid-Level Package",
     message: " + Start Version , We offer you blockchain project integrated with IPFS, Filecoin, ERC1155 token,  Provable & Chanlink ",
-    price: "40$",
+    price: "Coming soon",
     isOutlined: true
   },
   {
     title: "High-Level Package",
     message: "+ Mid-Level Package, We offer very customized blockchain project for supply chain, health care, voting and more",
-    price: "100$",
+    price: "Coming soon",
     isOutlined: false
   }
   ]
