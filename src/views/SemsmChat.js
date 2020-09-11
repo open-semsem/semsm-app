@@ -26,25 +26,19 @@ import {
 } from "reactstrap";
 // core components
 import Chatbot from 'react-chatbot-kit'
-import ChatConfig from '../components/chat-bot-data'
+import ChatConfig from '../components/bot/chat-bot-data'
 import SemsmNav from "components/Navbars/SemsmNav.js";
+import Footer from "components/Footers/Footer.js";
 
  
 function SemsmChat() {
   let pageHeader = React.createRef();
 
   React.useEffect(() => {
-    if (window.innerWidth < 991) {
-      const updateScroll = () => {
-        let windowScrollTop = window.pageYOffset / 3;
-        pageHeader.current.style.transform =
-          "translate3d(0," + windowScrollTop + "px,0)";
-      };
-      window.addEventListener("scroll", updateScroll);
-      return function cleanup() {
-        window.removeEventListener("scroll", updateScroll);
-      };
-    }
+    document.body.classList.add("profile-page");
+    return function cleanup() {
+      document.body.classList.remove("profile-page");
+    };
   });
 
   return (
@@ -92,6 +86,7 @@ function SemsmChat() {
 
      
       </div>
+      <Footer />
     </>
   );
 }

@@ -34,10 +34,9 @@ import {
 // core components
 import SemsmNav from "components/Navbars/SemsmNav.js";
 import LandingPageHeader from "components/Headers/LandingPageHeader.js";
-import Semsm from "components/Semsm/Semsm.js";
-import Service from "components/Service/Service.js";
-import WorkCycle from "components/WorkCycle/index.js";
-import Pricing from "components/Pricing/Pricing.js";
+ import Subscribe from "components/Subscribe/index.js";
+import Products from "components/products/index.js";
+import About from "components/about/index.js";
 import Team from "components/Team/Team.js";
 import Footer from "components/Footers/Footer.js";
 
@@ -55,10 +54,9 @@ function LandingPage() {
       <LandingPageHeader />
     
       <div className="main">
-      <Semsm />
-      <Service />
-      <WorkCycle />
-      <Pricing />
+      
+   <About/>
+   <Products/>
       <Team />
       <div className="section landing-section">
           <Container>
@@ -106,9 +104,13 @@ function LandingPage() {
                 </Form>
               </Col>
             </Row>
+      
+      
           </Container>
         </div>
       </div>
+      <Subscribe/>
+
       <Footer />
     </>
   );

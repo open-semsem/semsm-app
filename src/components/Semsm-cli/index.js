@@ -75,14 +75,9 @@ function Semsm() {
                     />
                   </Col>
                   <Col md="12" className="popup-txt-container">
-                    <p className="white-text text-center"> You can build your prototype in several minutes </p>
-                    <h1 className="white-text text-center"> Just Open Semsm</h1>
-                    <Button
-                      className="btn btn-danger"
-                      href="/chat"
-                      // onClick={(e) => e.preventDefault()}
-                    >
-                      OPEN SEMSM                    </Button>
+                   <pre class="bd-semsm-code"><code>npm install @semsm/semsm-cli</code></pre>
+                   <pre class="bd-semsm-code"><code>npm install @semsm/semsm-cli</code></pre>
+
                   </Col>
 
 

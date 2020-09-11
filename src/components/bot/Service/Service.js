@@ -33,11 +33,29 @@ const service=[
   src:"004-social-media-1.svg",
 
   isOutlined: true
-},
+}
+,
   {
   title:"Customizable deployment templates ",
   message:"",
   src:"003-responsive.svg",
+
+  isOutlined: false,
+}
+,
+  {
+  title:"Accelerate time to value",
+  message:"",
+  src:"rsz_timetovalue.gif",
+
+  isOutlined: false,
+}
+
+,
+  {
+  title:"No coding skills",
+  message:"",
+  src:"Icon-No-Code.png",
 
   isOutlined: false,
 }
@@ -55,21 +73,20 @@ const service=[
     <Container>
       <Row>
         <Col className="ml-auto mr-auto" md="8">
-          <h2 className="title">Our Service</h2>
+          <h2 className="title">Semsm Bot Features</h2>
           <h5 className="description">
-          AI assistant for fast prototyping business ideas into a blockchain applications
-          </h5>
-   
+          Semsm offers workflow automation tools that accelerate time to value when building blockchain based projects.   
+       </h5>
         </Col>
       </Row>
      
       <Row>
       {service.map((value) => (
-            <Col md="3" key={value.src}>
+            <Col md="4" key={value.src}>
               <Card className="card-profile offer-card">
               <div className="card-image">
                        <img
-                      src={require(`../../assets/pic/${value.src}`)} alt={value.title}
+                      src={require(`../../../assets/pic/${value.src}`)} alt={value.title}
                       />
                     
                   </div>

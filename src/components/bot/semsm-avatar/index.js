@@ -1,5 +1,5 @@
 import React from "react";
-const logoUrl = require('../../assets/pic/logo.svg');
+const logoUrl = require('../../../assets/pic/logo.svg');
 
 const SemsmAvatar = () => {
   return (

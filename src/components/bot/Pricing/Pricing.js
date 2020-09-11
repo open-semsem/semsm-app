@@ -38,7 +38,7 @@ export default function Pricing() {
       <Container>
         <Row>
           <Col className="ml-auto mr-auto" md="8">
-            <h2 className="title-pricing">Our Pricing</h2>
+            <h2 className="title-pricing">Semsm Bot Pricing</h2>
             {/* <p className="title-pricing">
               We are providing free and premium packages, you can choose between variety of options
           </p>

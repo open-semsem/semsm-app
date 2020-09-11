@@ -7,7 +7,7 @@
   import SemsmAvatar from "../semsm-avatar";
   import {
     BotService
-  } from "../../services/bot.service";
+  } from "../../../services/bot.service";
   const callBot = new BotService()
   // MessageParser starter code
   class MessageParser {
