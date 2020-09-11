@@ -232,7 +232,7 @@ function SemsmChat() {
                 ],
               }, {
                 id: "109",
-                message: "Should the record of transactions be immutable?",
+                message: "Should the record of transactions be mutable?",
                 trigger: "110",
               },
               {
