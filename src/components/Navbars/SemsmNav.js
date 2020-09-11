@@ -45,13 +45,13 @@ function SemsmNav() {
   React.useEffect(() => {
     const updateNavbarColor = () => {
       if (
-        document.documentElement.scrollTop > 199 ||
-        document.body.scrollTop > 199
+        document.documentElement.scrollTop > 99 ||
+        document.body.scrollTop > 99
       ) {
         setNavbarColor("");
       } else if (
-        document.documentElement.scrollTop < 200 ||
-        document.body.scrollTop < 200
+        document.documentElement.scrollTop < 100 ||
+        document.body.scrollTop < 100
       ) {
         setNavbarColor("navbar-transparent");
       }
@@ -64,12 +64,9 @@ function SemsmNav() {
     };
   });
   const list = [
-    { name: 'HOME', url: "Home" },
-    { name: 'SEMSM', url: "Semsm" },
-    { name: 'SERVICES', url: 'Services' },
-    { name: 'PRICES', url: "Prices" },
-    { name: 'CONTACT', url: "Subscribe" }
-  
+    { name: 'HOME', url: "home" },
+    { name: 'SEMSM BOT', url: "semsm-bot" },
+    { name: 'SEMSM CLI', url: "Semsm-cli" },  
   ];
   return (
     <Navbar
