@@ -17,7 +17,7 @@
 
 */
 import React from "react";
- // reactstrap components
+// reactstrap components
 import {
   Button,
   Container,
@@ -62,7 +62,7 @@ function LandingPageHeader() {
 
 
               <Col md="6">
-                <h2 className="home-data-h1"> Build Blockchain Prototype</h2>
+                <h2 className="home-data-h1"> Your assistant to build Web3 components </h2>
 
                 <Row>
 
@@ -98,15 +98,18 @@ function LandingPageHeader() {
                   <Col md="10">
                     <br />
                     <p className="home-text">
-                      Semsm is an AI assistant for fast prototyping your business idea into a blockchain application.
+                      Accelerate your time to value using Semsm's workflow automation tools.
+                     
+
                     </p>
                     <Button
                       className="btn-lg btn-danger"
                       href="#pablo"
                       onClick={(e) => e.preventDefault()}
                     >
-                      GET A FREE PROTOTYPE
+                      Check Semsm's Tools
                     </Button>
+               
                   </Col>
 
                 </Row>
