@@ -9,6 +9,15 @@
     max-width: 1360px !important;
 
 }
+.bd-semsm-code {
+    background-color: #23001A;
+    color: #fff;
+    // width: 50%;
+  }
+.bd-semsm-code-div {
+   margin-left: 30%;
+    width: 40%;
+  }
 .title-pricing{
     // text-align: left !important;
     color: $font-color !important;
@@ -39,6 +48,15 @@ opacity: 1;
     top: -150px;
     // align-self: center;
     text-align: center;
+}
+.semsm-popup-box{}
+.btn-cli {
+    background: #e911bd;
+    color: #fff;
+  }
+  .btn-cli:hover {
+  background: #fff;
+  color: #33262a;
 }
 .page-header{
     background-color: white;
