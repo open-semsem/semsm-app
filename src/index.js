@@ -28,20 +28,31 @@ import "typeface-poppins";
 
 // pages
  import SemsmChat from "views/SemsmChat.js";
+ import SemsmBot from "views/SemsmBot.js";
+ import SemsmCLI from "views/SemsmCLI.js";
  import LandingPage from "views/LandingPage.js";
  // others
 
 ReactDOM.render(
   <BrowserRouter>
     <Switch>
-      <Route path="/Home" render={(props) => <LandingPage {...props} />} />
+      <Route path="/home" render={(props) => <LandingPage {...props} />} />
     
       <Route
         path="/chat"
         render={(props) => <SemsmChat {...props} />}
       />
+      <Route
+        path="/semsm-bot"
+        render={(props) => <SemsmBot {...props} />}
+      />
+      <Route
+        path="/semsm-cli"
+        render={(props) => <SemsmCLI {...props} />}
+      />
+   
   
-      <Redirect to="/Home" />
+      <Redirect to="/home" />
     </Switch>
   </BrowserRouter>,
   document.getElementById("root")
