@@ -21,14 +21,14 @@ import React from "react";
 
 // reactstrap components
 import { Row, Container } from "reactstrap";
-const imageUrl =  require('../../assets/pic/footer@2x.png');
+const imageUrl = require('../../assets/pic/footer@2x.png');
 
 function Footer() {
   return (
-    <footer className="footer footer-black footer-white footer-img" style={{backgroundImage: `url(${imageUrl}) ` }}>
-      
+    <footer className="footer footer-black footer-white footer-img" style={{ backgroundImage: `url(${imageUrl}) ` }}>
+
       <Container >
-       
+
         <Row >
           <nav className="footer-nav">
             <ul>
@@ -42,7 +42,7 @@ function Footer() {
               </li>
               <li>
                 <a
-                  href="http://blog.creative-tim.com/?ref=pkr-footer"
+                  href="https://semsm.substack.com/"
                   target="_blank"
                 >
                   Blog
@@ -50,10 +50,11 @@ function Footer() {
               </li>
               <li>
                 <a
-                  href="https://www.creative-tim.com/license?ref=pkr-footer"
+                  href="https://github.com/open-semsem"
                   target="_blank"
                 >
-                  Licenses
+                  <i className="fa fa-github" />
+                  Github
                 </a>
               </li>
             </ul>
@@ -65,7 +66,7 @@ function Footer() {
             </span>
           </div>
         </Row>
-       </Container>
+      </Container>
     </footer>
   );
 }
