@@ -17,7 +17,7 @@ export default function Team() {
 
     <div className="section section-dark text-center">
       <Container>
-        <h2 className="title">Our Team</h2>
+        <h2 className="title">Semsm's Team</h2>
         <Row>
           <Col md="12">
             <Card className="card-profile card-plain">
