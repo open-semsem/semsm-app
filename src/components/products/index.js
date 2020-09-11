@@ -51,7 +51,7 @@ export default function Products() {
  
                 </CardBody>
                 <CardFooter className="text-center">
-                  <Button className=" btn-round btn-outline-danger" color="danger" href="#pablo">
+                  <Button className=" btn-round btn-outline-danger" color="danger" href="/semsm-bot">
                    View Details
                      </Button>
                 </CardFooter>
@@ -81,7 +81,7 @@ export default function Products() {
  
                 </CardBody>
                 <CardFooter className="text-center">
-                  <Button className=" btn-round btn-outline-danger" color="danger" href="#pablo">
+                  <Button className=" btn-round btn-outline-danger" color="danger" href="/semsm-cli">
                    View Details
                      </Button>
                 </CardFooter>
