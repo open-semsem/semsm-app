@@ -22,7 +22,7 @@ export default function Products() {
         <Row>
           <Col className="ml-auto mr-auto" md="8">
             <h2 className="title-pricing">Semsm's Tools </h2>
-            <p className="title-pricing">
+            <p className="text-center text-muted">
             Semsm offers workflow automation tools that accelerate time to value when building blockchain based projects.
           </p>
        
@@ -31,7 +31,7 @@ export default function Products() {
               <Row>
          
             <Col md="6"> 
-              <Card className="card-profile pricing-card">
+              <Card className="card-plain pricing-card">
 
                 <CardBody>
                   <a href="#pablo" onClick={(e) => e.preventDefault()}>
@@ -45,7 +45,7 @@ export default function Products() {
                         Semsm Bot</CardTitle>
                     </div>
                   </a>
-                  <p className="card-description text-center">
+                  <p className="card-description text-center ">
                   For fast prototyping your business idea into tangible blockchain project trough a friendly chatbot, so you can get your blockchain project in few minutes rather than months of development, Semsm will also help you validate whether your idea is a good blockchain use case or not.
                   </p>
  
@@ -60,7 +60,7 @@ export default function Products() {
 
 
             <Col md="6"> 
-              <Card className="card-profile pricing-card">
+              <Card className="card-plain pricing-card">
 
                 <CardBody>
                   <a href="#pablo" onClick={(e) => e.preventDefault()}>
