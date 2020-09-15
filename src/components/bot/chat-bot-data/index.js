@@ -236,7 +236,7 @@
   ];
   const decisionMaker = [{
       id: "1001",
-      message: "You don't need blockchain, Use database",
+      message: "You don't need blockchain",
       trigger: "6",
     },
     {
