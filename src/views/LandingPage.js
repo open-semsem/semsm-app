@@ -39,8 +39,19 @@ import Products from "components/products/index.js";
 import About from "components/about/index.js";
 import Team from "components/Team/Team.js";
 import Footer from "components/Footers/Footer.js";
-
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+const notify = () => toast('🦄 Hey, Semsm is still in alfa version and under active developing ', {
+    position: "top-right",
+    autoClose: 50000,
+    hideProgressBar: false,
+    closeOnClick: true,
+    pauseOnHover: true,
+    draggable: true,
+    progress: undefined,
+  });
 function LandingPage() {
+  notify();
   document.documentElement.classList.remove("nav-open");
   React.useEffect(() => {
     document.body.classList.add("profile-page");
@@ -51,6 +62,15 @@ function LandingPage() {
   return (
     <>
       <SemsmNav />
+      <ToastContainer
+    position="top-right"
+    autoClose={false}
+    newestOnTop={false}
+    closeOnClick
+    rtl={false}
+    pauseOnFocusLoss
+    draggable
+  />
       <LandingPageHeader />
     
       <div className="main">

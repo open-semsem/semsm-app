@@ -30,9 +30,21 @@ import Semsm from "components/cli/Semsm/Semsm.js";
 import WorkCycle from "components/cli/WorkCycle/index.js";
  
 import Footer from "components/Footers/Footer.js";
-
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+const notify = () => toast('🦄 Hey, Semsm is still in alfa version and under active developing ', {
+    position: "top-right",
+    autoClose: 50000,
+    hideProgressBar: false,
+    closeOnClick: true,
+    pauseOnHover: true,
+    draggable: true,
+    progress: undefined,
+  });
 
 function SemsmChat() {
+  notify();
+  
   let pageHeader = React.createRef();
 
   React.useEffect(() => {
@@ -45,6 +57,15 @@ function SemsmChat() {
   return (
     <>
       <SemsmNav />
+      <ToastContainer
+    position="top-right"
+    autoClose={false}
+    newestOnTop={false}
+    closeOnClick
+    rtl={false}
+    pauseOnFocusLoss
+    draggable
+  />
       <Semsm />
       <WorkCycle />
      

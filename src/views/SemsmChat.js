@@ -33,8 +33,17 @@ import Footer from "components/Footers/Footer.js";
 import septs from "../components/bot/chat-bot-data/index";
 
 import { ThemeProvider } from "styled-components";
- 
-
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+const notify = () => toast('🦄 Hey, Semsm is still in alfa version and under active developing ', {
+    position: "top-right",
+    autoClose: 50000,
+    hideProgressBar: false,
+    closeOnClick: true,
+    pauseOnHover: true,
+    draggable: true,
+    progress: undefined,
+  });
 const theme = {
   background: "#f5f8fb",
   // headerFontColor: "#fff",
@@ -45,6 +54,7 @@ const theme = {
   botFontColor: "#fff",
 };
 function SemsmChat() {
+  notify();
   console.log(septs,'septs');
   let pageHeader = React.createRef();
 
@@ -58,6 +68,15 @@ function SemsmChat() {
   return (
     <>
        <SemsmNav />
+       <ToastContainer
+    position="top-right"
+    autoClose={false}
+    newestOnTop={false}
+    closeOnClick
+    rtl={false}
+    pauseOnFocusLoss
+    draggable
+  />
       <div
         style={{
           backgroundImage:
