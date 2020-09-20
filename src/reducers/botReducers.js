@@ -61,7 +61,7 @@ export const rest = () => ({
 // const projectType = {
 
 //   type: "",
-//   slandered: "",
+//   standard: "",
 //   params: [],
 //   blockchainPlatform: "",
 //   NetworkType: "",
@@ -95,7 +95,7 @@ export default function reducer(
     case REST:
       return {
         projectType: "",
-          slandered: "",
+          standered: "",
           params: [],
           blockchainPlatform: "",
           networkType: "",
