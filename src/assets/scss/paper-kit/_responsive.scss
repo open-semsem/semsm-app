@@ -11,6 +11,9 @@
         margin-bottom: 1%;
         position: inherit;
     }
+    .title-txt{
+        font-size: 2em;
+    }
     .footer-img{
         
         background-size: contain ;
@@ -586,7 +589,7 @@
 
     .navbar-translate{
         width: 100%;
-        position: relative;
+        position: fixed;
         display: flex;
         -ms-flex-pack: justify !important;
         justify-content: space-between !important;

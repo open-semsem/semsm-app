@@ -97,7 +97,7 @@ function SemsmChat() {
                 }}>
 
                   <Col md="12" className="">
-                    <h2 className="white-text text-center">Welcome to Semsm</h2>
+                    <h2 className="white-text text-center title-txt">Welcome to Semsm</h2>
 
                     {/* <Chatbot config={ChatConfig.config} actionProvider={ChatConfig.ActionProvider} 	    messageParser={ChatConfig.MessageParser} /> */}
                     <ThemeProvider theme={theme}>
