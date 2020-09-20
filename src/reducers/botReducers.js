@@ -18,7 +18,7 @@ export const addNew = step => ({
 });
 export const addMintable = () => ({
   type: ADD_MINTABLE
-  
+
 });
 export const addCap = cap => ({
   type: ADD_CAP,
@@ -70,6 +70,7 @@ export const rest = () => ({
 // };
 
 export default function reducer(
+
   state = {
     // table
 
@@ -77,8 +78,8 @@ export default function reducer(
     projectType: "",
     standard: "",
     params: [],
-    isMintable:false,
-    cap:"",
+    isMintable: false,
+    cap: "",
     blockchainPlatform: "",
     networkType: "",
     contractFramework: "",
@@ -86,9 +87,10 @@ export default function reducer(
   },
   action
 ) {
+  console.log(action, 'action.projectType');
+
   switch (action.type) {
     // Sidebar
-
 
     case REST:
       return {
@@ -101,48 +103,51 @@ export default function reducer(
           webFramework: ""
       }
 
-      case addProjectType:
+      case ADD_PROJECT_TYPE:
+        console.log(action.projectType, 'action.projectType');
+        console.log(state, 'state state');
+
         return {
           ...state,
           projectType: action.projectType
         };
-      case addStandard:
+      case ADD_STANDARD:
         return {
           ...state,
           standard: action.standard
         };
 
-      case addParam:
+      case ADD_PARAM:
         return {
           ...state,
-          params: state.params.push(action.param)
+          params: state.params.concat(action.param)
         };
-      case addBlockchainPlatform:
+      case ADD_BLOCKCHAIN:
         return {
           ...state,
           blockchainPlatform: action.blockchainPlatform
         };
-      case addNetwork:
+      case ADD_NETWORK:
         return {
           ...state,
           networkType: action.networkType
         };
-      case addContractFramework:
+      case ADD_CONTRACT_FRAMEWORK:
         return {
           ...state,
           contractFramework: action.contractFramework
         };
-      case addCap:
+      case ADD_CAP:
         return {
           ...state,
           cap: action.cap
         };
-      case addMintable:
+      case ADD_WEB_FRAMEWORK:
         return {
           ...state,
-          cap: action.cap
+          webFramework: action.webFramework
         };
-      case addWebFramework:
+      case ADD_MINTABLE:
         return {
           ...state,
           isMintable: true,
