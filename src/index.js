@@ -25,15 +25,18 @@ import "assets/css/bootstrap.min.css";
 import "assets/scss/paper-kit.scss?v=1.2.0";
 import "assets/demo/demo.css?v=1.2.0";
 import "typeface-poppins";
-
+import configureStore from './config/configureStore';
+import { Provider } from 'react-redux';
 // pages
  import SemsmChat from "views/SemsmChat.js";
  import SemsmBot from "views/SemsmBot.js";
  import SemsmCLI from "views/SemsmCLI.js";
  import LandingPage from "views/LandingPage.js";
  // others
+ const store = configureStore();
 
 ReactDOM.render(
+  <Provider store={store}>
   <BrowserRouter>
     <Switch>
       <Route path="/home" render={(props) => <LandingPage {...props} />} />
@@ -54,6 +57,7 @@ ReactDOM.render(
   
       <Redirect to="/home" />
     </Switch>
-  </BrowserRouter>,
+  </BrowserRouter>
+  </Provider>,
   document.getElementById("root")
 );

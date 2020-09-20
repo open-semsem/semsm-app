@@ -24,26 +24,25 @@ import {
   Row,
   Col,
 } from "reactstrap";
-import ChatBot from "react-simple-chatbot";
 // core components
 // import Chatbot from 'react-chatbot-kit'
 // import ChatConfig from '../components/bot/chat-bot-data'
 import SemsmNav from "components/Navbars/SemsmNav.js";
 import Footer from "components/Footers/Footer.js";
-import septs from "../components/bot/chat-bot-data/index";
+import SemsmBot from "../components/bot/chat-bot-data/index";
 
 import { ThemeProvider } from "styled-components";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 const notify = () => toast('🦄 Hey, Semsm is still in alfa version and under active developing ', {
-    position: "top-right",
-    autoClose: 50000,
-    hideProgressBar: false,
-    closeOnClick: true,
-    pauseOnHover: true,
-    draggable: true,
-    progress: undefined,
-  });
+  position: "top-right",
+  autoClose: 50000,
+  hideProgressBar: false,
+  closeOnClick: true,
+  pauseOnHover: true,
+  draggable: true,
+  progress: undefined,
+});
 const theme = {
   background: "#f5f8fb",
   // headerFontColor: "#fff",
@@ -55,8 +54,7 @@ const theme = {
 };
 function SemsmChat() {
   notify();
-  console.log(septs,'septs');
-  let pageHeader = React.createRef();
+   let pageHeader = React.createRef();
 
   React.useEffect(() => {
     document.body.classList.add("profile-page");
@@ -67,16 +65,16 @@ function SemsmChat() {
 
   return (
     <>
-       <SemsmNav />
-       <ToastContainer
-    position="top-right"
-    autoClose={false}
-    newestOnTop={false}
-    closeOnClick
-    rtl={false}
-    pauseOnFocusLoss
-    draggable
-  />
+      <SemsmNav />
+      <ToastContainer
+        position="top-right"
+        autoClose={false}
+        newestOnTop={false}
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+      />
       <div
         style={{
           backgroundImage:
@@ -91,25 +89,20 @@ function SemsmChat() {
           <Container>
             <Row>
 
-               <Col md="12">
+              <Col md="12">
 
                 <Row className="image-chat-popup-bg" style={{
                   backgroundImage:
                     "url(" + require("assets/pic/popup.png") + ")",
                 }}>
-            
-                  <Col md="12" className="">
-                  <h2 className="white-text text-center">Welcome to Semsm</h2>
 
-                  {/* <Chatbot config={ChatConfig.config} actionProvider={ChatConfig.ActionProvider} 	    messageParser={ChatConfig.MessageParser} /> */}
-                  <ThemeProvider theme={theme}>
-          <ChatBot
-            // headerTitle="Semsm Chatbot"
-            steps={septs}
-               botAvatar={require("assets/pic/logo.svg")}
-            // floating
-          />
-        </ThemeProvider>
+                  <Col md="12" className="">
+                    <h2 className="white-text text-center">Welcome to Semsm</h2>
+
+                    {/* <Chatbot config={ChatConfig.config} actionProvider={ChatConfig.ActionProvider} 	    messageParser={ChatConfig.MessageParser} /> */}
+                    <ThemeProvider theme={theme}>
+                   <SemsmBot/>
+                    </ThemeProvider>
                   </Col>
 
 
@@ -124,7 +117,7 @@ function SemsmChat() {
           </Container>
         </div>
 
-     
+
       </div>
       <Footer />
     </>
