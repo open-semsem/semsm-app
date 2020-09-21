@@ -29,6 +29,7 @@ import configureStore from './config/configureStore';
 import { Provider } from 'react-redux';
 // pages
  import SemsmChat from "views/SemsmChat.js";
+ import SemsmOutput from "views/SemsmOutput.js";
  import SemsmBot from "views/SemsmBot.js";
  import SemsmCLI from "views/SemsmCLI.js";
  import LandingPage from "views/LandingPage.js";
@@ -52,6 +53,10 @@ ReactDOM.render(
       <Route
         path="/semsm-cli"
         render={(props) => <SemsmCLI {...props} />}
+      />
+      <Route
+        path="/semsm-output"
+        render={(props) => <SemsmOutput {...props} />}
       />
    
   

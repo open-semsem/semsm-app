@@ -1,5 +1,6 @@
 // Sidebar
 export const ADD_NEW_STEP = 'ADD_NEW_STEP';
+export const ADD_REPO = 'ADD_REPO';
 export const ADD_CAP = 'ADD_CAP';
 export const ADD_MINTABLE = 'ADD_MINTABLE';
 export const ADD_PARAM = 'ADD_PARAM';
@@ -15,6 +16,10 @@ export const REST = 'REST';
 export const addNew = step => ({
   type: ADD_NEW_STEP,
   step
+});
+export const addRepo = repo => ({
+  type: ADD_REPO,
+  repo
 });
 export const addMintable = () => ({
   type: ADD_MINTABLE
@@ -75,6 +80,7 @@ export default function reducer(
     // table
 
 
+    repo: {},
     projectType: "",
     standard: "",
     params: [],
@@ -87,13 +93,13 @@ export default function reducer(
   },
   action
 ) {
-  console.log(action, 'action.projectType');
 
   switch (action.type) {
     // Sidebar
 
     case REST:
       return {
+        repo: {},
         projectType: "",
           standered: "",
           params: [],
@@ -103,15 +109,21 @@ export default function reducer(
           webFramework: ""
       }
 
+      case ADD_REPO:
+             return {
+          ...state,
+          repo: action.repo
+        };
       case ADD_PROJECT_TYPE:
-        console.log(action.projectType, 'action.projectType');
-        console.log(state, 'state state');
+        console.log(state, 'state');
 
-        return {
+             return {
           ...state,
           projectType: action.projectType
         };
       case ADD_STANDARD:
+        console.log(state, 'state');
+
         return {
           ...state,
           standard: action.standard
