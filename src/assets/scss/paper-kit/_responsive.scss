@@ -25,9 +25,12 @@
     }
     .image-popup-bg{
         min-width:  100%;
-        margin-top: 30%;
+        margin-top: 50%;
         min-height:  450px;
   
+    }
+      .message-output{
+        margin-top: 20% !important;
     }
     .popup-txt-container{
         top: -100px;
@@ -38,6 +41,28 @@
          /* align-items: flex-end; */
         /* align-content: center; */
         top: -80px;
+        // left: 30%;
+     }
+     .round-btn{
+        // left: 990px;
+         width: 220px;
+         height: 59px;
+         margin-left: 0;
+       
+     
+     }
+     .round-btn:hover{
+        background: #660704;
+     
+     }
+   
+    .img-semsm-output {
+     
+        width: 100px;
+         /* align-items: flex-end; */
+        /* align-content: center; */
+        margin-top: 5%;
+       // top: -80px;
         // left: 30%;
      }
     .register-page {

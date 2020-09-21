@@ -42,9 +42,23 @@
     background-color: transparent !important;
     width: 150px;
     position: relative;
+  
     /* align-items: flex-end; */
     /* align-content: center; */
     top: -80px;
+    // left: 50%;
+ }
+.img-semsm-output {
+    border: 0 none;
+    border-radius: $border-radius-extreme;
+    background-color: transparent !important;
+    width: 150px;
+    position: relative;
+    /* align-items: flex-end; */
+    /* align-content: center; */
+    margin-top: 5%;
+    margin-bottom: 10%;
+
     // left: 50%;
  }
 
