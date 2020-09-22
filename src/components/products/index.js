@@ -17,7 +17,7 @@ export default function Products() {
 
   return (
 
-    <div className="section section-nude text-center">
+    <div className="section section-nude text-center" id="products">
       <Container>
         <Row>
           <Col className="ml-auto mr-auto" md="8">

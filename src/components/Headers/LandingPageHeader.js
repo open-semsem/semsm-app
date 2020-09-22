@@ -104,8 +104,9 @@ function LandingPageHeader() {
                     </p>
                     <Button
                       className="btn-lg btn-danger"
-                      href="#pablo"
-                      onClick={(e) => e.preventDefault()}
+                      href="#products"
+                      id="product-btn"
+                   //   onClick={(e) => scrollToProducts()}
                     >
                       Check Semsm's Tools
                     </Button>
