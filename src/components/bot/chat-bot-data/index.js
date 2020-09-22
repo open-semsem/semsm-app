@@ -1,32 +1,47 @@
-// Config starter code
 
 import React, { Component } from "react";
 import { connect } from 'react-redux';
 import ChatBot from "react-simple-chatbot";
-import {rest,addNew,addMintable,addParam,addContractFramework,addBlockchainPlatform,addNetwork,addProjectType,addWebFramework,addStandard,addCap} from '../../../reducers/botReducers'
+import {
+  Button,
+} from "reactstrap";
+ import { GetRepoFromState } from '../../../helper/util'
+ import { asyncLocalStorage } from '../../../helper/local-storage'
+import { rest, addNew, addMintable, addParam, addContractFramework, addBlockchainPlatform, addNetwork, addProjectType, addWebFramework, addStandard, addCap, addRepo } from '../../../reducers/botReducers'
 class Bot extends Component {
   constructor(props) {
     super();
 
     this.state = {
-    ...props,
+      ...props,
       ended: false,
+      repo: false,
       // projectType: "",
-      // slandered: "",
+      // standard: "",
       // params: [],
       // blockchainPlatform: "",
       // networkType: "",
       // contractFramework: "",
       // webFramework: ""
     };
-    console.log(this.state, '  this.state');
+    console.log(props, '  this.state');
   }
-  handelFinish(){
-    console.log('ended');
-    if(this.state.projectType!=""){
-      console.log('cooking your meal');
+ async handelFinish() {
+
+    const repo = GetRepoFromState(this.props);
+    if (repo === true) {
+      return "404";
+    } else {
+      this.setState({ repo: repo });
+      // show the new view
+     await asyncLocalStorage.setItem("repo",repo)
+     await asyncLocalStorage.setItem("params",this.props.params)
+      this.state.addRepo(repo);
+      return "8";
     }
+
   }
+
   getSteps() {
 
 
@@ -173,22 +188,34 @@ class Bot extends Component {
       options: [{
         value: 1,
         label: " Ethereum",
-        trigger: "452",
+        trigger: () => {
+          this.state.addBlockchainPlatform("ethereum")
+          return "452"
+        }
       },
       {
         value: 2,
         label: "Celo",
-        trigger: "404",
+        trigger: () => {
+          this.state.addBlockchainPlatform("celo")
+          return "404"
+        }
       },
       {
         value: 3,
         label: "Hyperledger fabric",
-        trigger: "404",
+        trigger: () => {
+          this.state.addBlockchainPlatform("fabric")
+          return "404"
+        }
       },
       {
         value: 4,
         label: "Corda",
-        trigger: "404",
+        trigger: () => {
+          this.state.addBlockchainPlatform("corda")
+          return "404"
+        }
       },
       {
         value: 5,
@@ -207,22 +234,34 @@ class Bot extends Component {
       options: [{
         value: 1,
         label: "  Mainnet",
-        trigger: "455",
+        trigger: () => {
+          this.state.addNetwork("mainnet")
+          return "455"
+        }
       },
       {
         value: 2,
         label: " Rinkeby ",
-        trigger: "455",
+        trigger: () => {
+          this.state.addNetwork("rinkeby")
+          return "455"
+        }
       },
       {
         value: 3,
         label: "Ropsten",
-        trigger: "455",
+        trigger: () => {
+          this.state.addNetwork("ropsten")
+          return "455"
+        }
       },
       {
         value: 4,
         label: "local",
-        trigger: "455",
+        trigger: () => {
+          this.state.addNetwork("local")
+          return "455"
+        }
       },
 
       ],
@@ -240,12 +279,18 @@ class Bot extends Component {
         options: [{
           value: 1,
           label: "Truffle",
-          trigger: "460",
+          trigger: () => {
+            this.state.addContractFramework("truffle")
+            return "460"
+          }
         },
         {
           value: 2,
           label: "Embark",
-          trigger: "404",
+          trigger: () => {
+            this.state.addWebFramework("embark")
+            return "404"
+          }
         },
 
         ],
@@ -262,22 +307,34 @@ class Bot extends Component {
         options: [{
           value: 1,
           label: "React",
-          trigger: "404",
+          trigger: () => {
+            this.state.addWebFramework("react")
+          return "cook"
+          }
         },
         {
           value: 2,
           label: "Angular",
-          trigger: "404",
+          trigger: () => {
+            this.state.addWebFramework("angular")
+            return "404"
+          }
         },
         {
           value: 3,
           label: "React Native",
-          trigger: "404",
+          trigger: () => {
+            this.state.addWebFramework("reactNative")
+            return "404"
+          }
         },
         {
           value: 4,
           label: "Java script with basic html",
-          trigger: "404",
+          trigger: () => {
+            this.state.addWebFramework("js")
+            return "404"
+          }
         },
 
         ],
@@ -487,7 +544,10 @@ class Bot extends Component {
     {
       id: "2",
       message: "How can I help?",
-      trigger: "3",
+      trigger: (data)=>{
+        console.log(data,'data');
+        return "3"
+      }
     },
     {
       id: "3",
@@ -499,6 +559,8 @@ class Bot extends Component {
       },
       {
         value: 2,
+        disabled:true,
+
         label: "I want to Learn more about blockchain",
         trigger: "404",
       },
@@ -529,6 +591,14 @@ class Bot extends Component {
       message: "Would you like to restart our discussion or end it ? ",
       trigger: "7",
     },
+    {
+      id: "cook",
+      component: <CustomComponent />,
+      trigger: ()=>{
+        this.handelFinish();
+        return "8"
+      },
+    },
     // end
     {
       id: "7",
@@ -544,12 +614,9 @@ class Bot extends Component {
       {
         value: 2,
         label: "End",
-        trigger: ()=>{
+        trigger: "8"
 
-          this.handelFinish()
-          return "8"
-        }
-       ,
+        ,
       },
 
       ],
@@ -610,11 +677,17 @@ class Bot extends Component {
     },
     {
       id: "211",
+      validator: (value) => {
+        if (!isNaN(value)) {
+          return 'value must be a text';
+        }
 
+        return true;
+      },
       user: true,
-      trigger: ({value}) => {
-        console.log(value,'input');
-        this.state.addParam({name:value})
+      trigger: ({ value }) => {
+        console.log(value, 'input');
+        this.state.addParam({ name: value })
         return "212"
       }
 
@@ -626,11 +699,17 @@ class Bot extends Component {
     },
     {
       id: "213",
+      validator: (value) => {
+        if (!isNaN(value)) {
+          return 'value must be a text';
+        }
 
+        return true;
+      },
       user: true,
-      trigger: ({value}) => {
-        console.log(value,'input');
-        this.state.addParam({symbol:value})
+      trigger: ({ value }) => {
+        console.log(value, 'input');
+        this.state.addParam({ symbol: value })
         return "214"
       }
 
@@ -644,9 +723,16 @@ class Bot extends Component {
       id: "215",
 
       user: true,
-      trigger: ({value}) => {
-        console.log(value,'input');
-        this.state.addParam({decimal:value})
+      validator: (value) => {
+        if (isNaN(value)) {
+          return 'value must be a number';
+        }
+
+        return true;
+      },
+      trigger: ({ value }) => {
+        console.log(value, 'input');
+        this.state.addParam({ decimals: value })
         return "216"
       }
 
@@ -678,8 +764,8 @@ class Bot extends Component {
       id: "221",
 
       user: true,
-      trigger: ({value}) => {
-        console.log(value,'input');
+      trigger: ({ value }) => {
+        console.log(value, 'input');
         this.state.addCap(value)
         return "219"
       }
@@ -694,15 +780,15 @@ class Bot extends Component {
       options: [{
         value: 1,
         label: "Generate token by calling mint function ",
-        trigger: "450",
+        trigger: () => {
+          this.state.addMintable()
+          return "450"
+        }
       },
       {
         value: 2,
         label: "Issue all tokens in contract creation and then transfer from contract owner account ",
-        trigger: () => {
-           this.state.addMintable()
-          return "450"
-        }
+        trigger: "404"
       },
       ],
     },
@@ -740,9 +826,9 @@ class Bot extends Component {
         id: "244",
 
         user: true,
-        trigger: ({value}) => {
-          console.log(value,'input');
-          this.state.addParam({name:value})
+        trigger: ({ value }) => {
+          console.log(value, 'input');
+          this.state.addParam({ name: value })
           return "245"
         }
 
@@ -756,9 +842,9 @@ class Bot extends Component {
         id: "246",
 
         user: true,
-        trigger: ({value}) => {
-          console.log(value,'input');
-          this.state.addParam({decimal:value})
+        trigger: ({ value }) => {
+          console.log(value, 'input');
+          this.state.addParam({ decimal: value })
           return "216"
         }
 
@@ -773,8 +859,8 @@ class Bot extends Component {
   render() {
     // const { completed, buffer, showProgress } = this.state;
 
-const steps=this.getSteps();
-console.log(steps,'stepssss');
+    const steps = this.getSteps();
+   // console.log(steps, 'stepssss');
 
     return (
       <ChatBot
@@ -790,6 +876,7 @@ console.log(steps,'stepssss');
 
 function mapDispatchToProps(dispatch) {
   return {
+    addRepo: repo => dispatch(addRepo(repo)),
     addNew: step => dispatch(addNew(step)),
     addParam: param => dispatch(addParam(param)),
     addProjectType: projectType => dispatch(addProjectType(projectType)),
@@ -809,15 +896,25 @@ const mapStateToProps = state => {
 
   return {
     projectType: state.botReducers.projectType,
-    slandered: state.botReducers.slandered,
+    standard: state.botReducers.standard,
     params: state.botReducers.params,
     blockchainPlatform: state.botReducers.blockchainPlatform,
     networkType: state.botReducers.networkType,
     contractFramework: state.botReducers.contractFramework,
-    webFramework: state.botReducers.webFramework
+    webFramework: state.botReducers.webFramework,
+    isMintable: state.botReducers.isMintable,
+    cap: state.botReducers.cap
   };
 };
 const SemsmBot = connect(mapStateToProps, mapDispatchToProps)(Bot);
 
 export default SemsmBot;
 
+const CustomComponent = () => (
+  <div><Button
+  className="btn btn-danger"
+  href="/semsm-output"
+  // onClick={(e) => e.preventDefault()}
+>
+  take your app                  </Button></div>
+);
