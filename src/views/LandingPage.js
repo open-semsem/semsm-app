@@ -41,7 +41,7 @@ import Team from "components/Team/Team.js";
 import Footer from "components/Footers/Footer.js";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-const notify = () => toast('🦄 Hey, Semsm is still in alfa version and under active developing ', {
+const notify = () => toast('🦄 Hey, Semsm is still in alpha version and under active developing ', {
     position: "top-right",
     autoClose: 50000,
     hideProgressBar: false,
