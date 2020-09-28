@@ -47,7 +47,7 @@ console.log(state.webFramework , 'state.webFramework == "react"');
             url: repoURL,
             branch: "react-eth-erc20"
         }
-    } else if (state.projectType == "token" && state.standard == "ERC721" && state.isMintable == true && state.blockchainPlatform == "Ethereum" && state.networkType == "local" && state.contractFramework == "truffle" && state.webFramework == "react") {
+    } else if (state.projectType == "token" && state.standard == "ERC721" && state.isMintable == true && state.blockchainPlatform == "ethereum" && state.networkType == "local" && state.contractFramework == "truffle" && state.webFramework == "react") {
         return {
             url: repoURL,
             branch: "react-eth-erc721"
