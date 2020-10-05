@@ -9,15 +9,17 @@ import {
   Button,
   Col,
 } from "reactstrap";
+import { useTranslation } from 'react-i18next';
 
 export default function Team() {
+  const { t } = useTranslation();
 
 
   return (
 
     <div className="section section-dark text-center">
       <Container>
-        <h2 className="title">Semsm's Team</h2>
+        <h2 className="title"> {t('landing_team')}</h2>
         <Row>
           <Col md="12">
             <Card className="card-profile card-plain">
@@ -25,22 +27,19 @@ export default function Team() {
                 <a href="#pablo" onClick={(e) => e.preventDefault()}>
                   <img
                     alt="..."
-                    src={require("assets/pic/EmanInHongKong.jpg")}
+                    src={require("../../assets/pic/EmanInHongKong.jpg")}
                   />
                 </a>
               </div>
               <CardBody>
                 <a href="#pablo" onClick={(e) => e.preventDefault()}>
                   <div className="author">
-                    <CardTitle tag="h4">Eman Herawy</CardTitle>
-                    <h6 className="card-category">Founder</h6>
+                    <CardTitle tag="h4"> {t('landing_team_eman')}</CardTitle>
+                    <h6 className="card-category"> {t('landing_team_eman_position')}</h6>
                   </div>
                 </a>
                 <p className="card-description text-center">
-                  Blockchain full stack developer .
-                  Mentor & Reviewer @Udacity,
-                  Devcon 5 scholar alumni @ethereum foundation,Truffle University alumni & MSc in Cloud computing networks.
-                    </p>
+              {t('landing_team_eman_details')} </p>
               </CardBody>
               <CardFooter className="text-center">
                 <Button

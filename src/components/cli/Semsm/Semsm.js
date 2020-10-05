@@ -45,11 +45,11 @@ function Semsm() {
   });
 
   return (
-    <>
+    <React.Fragment>
       <div
         style={{
           backgroundImage:
-            "url(" + require("assets/pic/openSemem1306@2x.png") + ")",
+            "url(" + require("../../../assets/pic/openSemem1306@2x.png") + ")",
         }}
         className="section-image"
         // data-parallax={true}
@@ -65,7 +65,7 @@ function Semsm() {
 
                 <Row className="image-popup-bg" style={{
                   backgroundImage:
-                    "url(" + require("assets/pic/popup.png") + ")",
+                    "url(" + require("../../../assets/pic/popup.png") + ")",
                 }}>
                   <Col md="12" className="popup-img-container">
                     <img className="img-semsm "
@@ -81,11 +81,11 @@ function Semsm() {
 
                     <br />
                     <br />
-                    <pre class="bd-semsm-code"><code>npm install @semsm/semsm-cli</code></pre>
+                    <pre className="bd-semsm-code"><code>npm install @semsm/semsm-cli</code></pre>
       <br/>
-      <a href="https://github.com/open-semsem/semsm-cli" class="btn btn-outline-danger ">GITHUB REPO</a>
+      <a href="https://github.com/open-semsem/semsm-cli" className="btn btn-outline-danger ">GITHUB REPO</a>
       
-      <a href="https://github.com/open-semsem/semsm-cli" class="btn btn-outline-danger">DOCS</a>
+      <a href="https://github.com/open-semsem/semsm-cli" className="btn btn-outline-danger">DOCS</a>
     
                     {/* <Button
                       className="btn btn-danger"
@@ -109,7 +109,7 @@ function Semsm() {
 
 
       </div>
-    </>
+    </React.Fragment>
   );
 }
 

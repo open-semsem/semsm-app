@@ -36,7 +36,7 @@ export default function WorkCycle() {
                     <p>Install</p>              </div>
 
                   <div className="description">
-                    <pre class="bd-semsm-code "><code>npm install @semsm/semsm-cli</code></pre>
+                    <pre className="bd-semsm-code "><code>npm install @semsm/semsm-cli</code></pre>
 
 
                   </div>
@@ -53,7 +53,7 @@ export default function WorkCycle() {
                     <p>Generate</p>              </div>
 
                   <div className="description">
-                  <pre class="bd-semsm-code "><code>semsm  -d YOUR_ARTIFACT_PATH  -p YOUR_PROVIDER</code></pre>
+                  <pre className="bd-semsm-code "><code>semsm  -d YOUR_ARTIFACT_PATH  -p YOUR_PROVIDER</code></pre>
 
 
                   </div>

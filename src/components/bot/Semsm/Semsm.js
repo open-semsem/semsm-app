@@ -24,10 +24,14 @@ import {
   Row,
   Col,
 } from "reactstrap";
+import { useTranslation } from 'react-i18next';
+
 // core components
 const imgUrl = require('../../../assets/pic/logo.svg');
 
 function Semsm() {
+  const { t } = useTranslation();
+
   let pageHeader = React.createRef();
 
   React.useEffect(() => {
@@ -45,11 +49,11 @@ function Semsm() {
   });
 
   return (
-    <>
+    <React.Fragment>
       <div
         style={{
           backgroundImage:
-            "url(" + require("assets/pic/openSemem1306@2x.png") + ")",
+            "url(" + require("../../../assets/pic/semsm-home-cave.png") + ")",
         }}
         className="section-image"
         // data-parallax={true}
@@ -65,7 +69,7 @@ function Semsm() {
 
                 <Row className="image-popup-bg" style={{
                   backgroundImage:
-                    "url(" + require("assets/pic/popup.png") + ")",
+                    "url(" + require("../../../assets/pic/popup.png") + ")",
                 }}>
                   <Col md="12" className="popup-img-container">
                     <img className="img-semsm "
@@ -75,11 +79,11 @@ function Semsm() {
                     />
                   </Col>
                   <Col md="12" className="popup-txt-container">
-                  <h1 className="white-text text-center">Semsm Bot</h1>
+                  <h1 className="white-text text-center">{t('app_name')}</h1>
                   <br/>
-                    <p className="white-text text-center"> Your assistant for fast prototyping business ideas into blockchain applications </p>
-                    <p className="white-text text-center"> You can build your prototype in several minutes </p>
-                    <h2 className="white-text text-center"> Just Open Semsm</h2>
+              <p className="white-text text-center">{t('landing_semsm_subtitle_desc')}</p>
+              <p className="white-text text-center">{t('landing_semsm_subtitle_desc2')}</p>
+                     <h2 className="white-text text-center"> {t('open_just_semsm')}</h2>
                   <br/>
                   <br/>
                     <Button
@@ -87,7 +91,7 @@ function Semsm() {
                       href="/chat"
                       // onClick={(e) => e.preventDefault()}
                     >
-                      OPEN SEMSM                    </Button>
+                     {t('open_semsm')}   </Button>
                   </Col>
 
 
@@ -104,7 +108,7 @@ function Semsm() {
 
      
       </div>
-    </>
+    </React.Fragment>
   );
 }
 

@@ -7,8 +7,11 @@ import {
   Row,
   Col,
 } from "reactstrap";
+import { useTranslation } from 'react-i18next';
 
 export default function Service() {
+  const { t } = useTranslation();
+
   // const [spacing, setSpacing] = React.useState(6);
 
   // const handleChange = (event) => {
@@ -16,46 +19,52 @@ export default function Service() {
   // };
 const service=[
   {
-  title:"Workflow automation",
+  title:t('landing_feature_consultation'),
   message:"",
-  src:"001-process.svg",
+  src:"consult.gif",
   isOutlined: false
 },
   {
-  title:"Interactive communication",
+  title:t('landing_feature_automation'),
   message:"",
-  src:"002-social-media.svg",
+  src:"workflow.gif",
+  isOutlined: false
+},
+  {
+  title:t('landing_feature_communication'),
+  message:"",
+  src:"chat.gif",
   isOutlined: true
 },
   {
-  title:"Ready to use Dapps",
+  title:t('landing_feature_use'),
   message:"",
-  src:"004-social-media-1.svg",
+  src:"rocket2.gif",
 
   isOutlined: true
 }
 ,
   {
-  title:"Customizable deployment templates ",
+  title:t('landing_feature_deployment'),
   message:"",
-  src:"003-responsive.svg",
+  src:"configrable.gif",
 
   isOutlined: false,
 }
+// ,
+//   {
+//   title:"Accelerate time to value",
+//   message:"",
+//   src:"rocket2.gif",
+
+//   isOutlined: false,
+// }
+
 ,
   {
-  title:"Accelerate time to value",
+  title:t('landing_feature_coding'),
   message:"",
-  src:"rsz_timetovalue.gif",
-
-  isOutlined: false,
-}
-
-,
-  {
-  title:"No coding skills",
-  message:"",
-  src:"Icon-No-Code.png",
+  src:"noCoding.gif",
 
   isOutlined: false,
 }
@@ -73,10 +82,9 @@ const service=[
     <Container>
       <Row>
         <Col className="ml-auto mr-auto" md="8">
-          <h2 className="title">Semsm Bot Features</h2>
+          <h2 className="title">{t('landing_feature_title')}</h2>
           <h5 className="description">
-          Semsm offers workflow automation tools that accelerate time to value when building blockchain based projects.   
-       </h5>
+    {t('landing_feature_subtitle')} </h5>
         </Col>
       </Row>
      

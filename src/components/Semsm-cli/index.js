@@ -45,7 +45,7 @@ function Semsm() {
   });
 
   return (
-    <>
+    <React.Fragment>
       <div
         style={{
           backgroundImage:
@@ -75,8 +75,8 @@ function Semsm() {
                     />
                   </Col>
                   <Col md="12" className="popup-txt-container">
-                   <pre class="bd-semsm-code"><code>npm install @semsm/semsm-cli</code></pre>
-                   <pre class="bd-semsm-code"><code>npm install @semsm/semsm-cli</code></pre>
+                   <pre className="bd-semsm-code"><code>npm install @semsm/semsm-cli</code></pre>
+                   <pre className="bd-semsm-code"><code>npm install @semsm/semsm-cli</code></pre>
 
                   </Col>
 
@@ -94,7 +94,7 @@ function Semsm() {
 
      
       </div>
-    </>
+    </React.Fragment>
   );
 }
 

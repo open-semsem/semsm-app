@@ -24,10 +24,14 @@ import {
   Row,
   Col,
 } from "reactstrap";
+import { useTranslation } from 'react-i18next';
+
 // core components
 const logoUrl = require('../../assets/pic/operation.png');
 
 function LandingPageHeader() {
+  const { t } = useTranslation();
+
   let pageHeader = React.createRef();
 
   React.useEffect(() => {
@@ -49,7 +53,7 @@ function LandingPageHeader() {
       <div
         style={{
           backgroundImage:
-            "url(" + require("assets/pic/back-header.png") + ")",
+            "url(" + require("../../assets/pic/back-header.png") + ")",
         }}
         className="page-header"
         // data-parallax={true}
@@ -62,7 +66,7 @@ function LandingPageHeader() {
 
 
               <Col md="6">
-                <h2 className="home-data-h1"> Your assistant to build Web3 components </h2>
+                <h2 className="home-data-h1"> {t('landing_main_title')} </h2>
 
                 <Row>
 
@@ -98,18 +102,21 @@ function LandingPageHeader() {
                   <Col md="10">
                     <br />
                     <p className="home-text">
-                      Accelerate your time to value using Semsm's workflow automation tools.
-                     
-
+                    {t('landing_main_subtitle_consult')}
                     </p>
+                    <p className="home-text">
+                    {t('landing_main_subtitle_dapp')}
+                    </p>
+                    <p className="home-text">
+                    {t('landing_main_subtitle_edu')}
+                    </p>
+                   <br/>
                     <Button
-                      className="btn-lg btn-danger"
-                      href="#products"
-                      id="product-btn"
-                   //   onClick={(e) => scrollToProducts()}
+                      className="btn btn-danger"
+                      href="/chat"
+                      // onClick={(e) => e.preventDefault()}
                     >
-                      Check Semsm's Tools
-                    </Button>
+                     {t('open_semsm')}                   </Button>
                
                   </Col>
 

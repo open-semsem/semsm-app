@@ -5,8 +5,10 @@ import {
   Row,
   Col,
 } from "reactstrap";
+import { useTranslation } from 'react-i18next';
 
 export default function WorkCycle() {
+  const { t } = useTranslation();
 
   return (
 
@@ -15,9 +17,9 @@ export default function WorkCycle() {
       <Container>
         <Row>
           <Col className="ml-auto mr-auto" md="8">
-            <h2 className="title">How it Works</h2>
+            <h2 className="title">{t('landing_how_work_title')}</h2>
             <h5 className="description">
-            Semsm offers ready-to-go blockchain projects through a friendly chatbot in several minutes rather than months. Semsm will also help you validate whether your idea is a good blockchain use case or not.
+            {t('landing_how_work_subtitle')}
           </h5>
 
           </Col>
@@ -25,56 +27,43 @@ export default function WorkCycle() {
         <br />
         <br />
         <Row>
-          <Col md="3">
+          <Col md="4">
             <div className="info">
               <div className="icon icon-danger">
                 <i className="nc-icon nc-tap-01" />
               </div>
               <div className="description">
                 <p className="description">
-                  Open Semsm
+                {t('open_semsm')}
 
               </p>
 
               </div>
             </div>
           </Col>
-          <Col md="3">
+          <Col md="4">
             <div className="info">
               <div className="icon icon-danger">
                 <i className="nc-icon nc-chat-33" />
               </div>
               <div className="description">
                 <p>
-                  Explain your idea in user friendly way
+                {t('chat')}
 
               </p>
 
               </div>
             </div>
           </Col>
-          <Col md="3">
-            <div className="info">
-              <div className="icon icon-danger">
-                <i className="nc-icon nc-settings-gear-65" />
-              </div>
-              <div className="description">
-                <p>
-                  Configure your application
-
-              </p>
-
-              </div>
-            </div>
-          </Col>
-          <Col md="3">
+    
+          <Col md="4">
             <div className="info">
               <div className="icon icon-danger">
                 <i className="nc-icon nc-spaceship" />
               </div>
               <div className="description">
                 <p>
-                  Get notified when app is developed and ready.
+                {t('get_service')}
 
               </p>
 

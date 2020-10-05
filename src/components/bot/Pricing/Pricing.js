@@ -9,40 +9,44 @@ import {
   Row,
   Col,
 } from "reactstrap";
+import { useTranslation } from 'react-i18next';
+
 
 
 export default function Pricing() {
- 
+  const { t } = useTranslation();
+
   const offers = [{
-    title: "Start Version",
-    message: "Free box for ERC20 & ERC721 token",
+    title: t('landing_pricing_start'),
+    message: t('landing_pricing_start_details'),
     price: "0$",
     isOutlined: false
   },
   {
-    title: "Mid-Level Package",
-    message: " + Start Version , We offer you blockchain project integrated with IPFS, Filecoin, ERC1155 token,  Provable & Chanlink ",
-    price: "Coming soon",
+    title: t('landing_pricing_mid'),
+    message: t('landing_pricing_mid_details'),
+    price: t('landing_pricing_soon'),
     isOutlined: true
   },
   {
-    title: "High-Level Package",
-    message: "+ Mid-Level Package, We offer very customized blockchain project for supply chain, health care, voting and more",
-    price: "Coming soon",
+    title: t('landing_pricing_high'),
+    message: t('landing_pricing_high_details'),
+    price: t('landing_pricing_soon'),
     isOutlined: false
   }
   ]
   return (
 
-    <div className="section section-pink text-center">
+    <div className="section section-pink text-center" id="pricing">
       <Container>
         <Row>
           <Col className="ml-auto mr-auto" md="8">
-            <h2 className="title-pricing">Semsm Bot Pricing</h2>
-            {/* <p className="title-pricing">
-              We are providing free and premium packages, you can choose between variety of options
+            <h2 className="title-pricing">{t('landing_pricing_title')}</h2>
+            <br/>
+            <p className="text-muted">
+            {t('landing_pricing_subtitle')}
           </p>
-        */}
+       
           </Col>
         </Row>
               <Row>
@@ -64,7 +68,7 @@ export default function Pricing() {
                 </CardBody>
                 <CardFooter className="text-center">
                   <Button className={value.isOutlined?" btn-round btn-outline-danger":"bt-round btn-danger"} color="danger" href="#pablo">
-                   Subscribe
+                  {t('subscribe')}
                      </Button>
                 </CardFooter>
               </Card>

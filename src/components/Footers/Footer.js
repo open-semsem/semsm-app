@@ -21,9 +21,13 @@ import React from "react";
 
 // reactstrap components
 import { Row, Container } from "reactstrap";
+import { useTranslation } from 'react-i18next';
+
 const imageUrl = require('../../assets/pic/footer@2x.png');
 
 function Footer() {
+  const { t } = useTranslation();
+
   return (
     <footer className="footer footer-black footer-white footer-img" style={{ backgroundImage: `url(${imageUrl}) ` }}>
 
@@ -37,7 +41,7 @@ function Footer() {
                   href="https://www.creative-tim.com?ref=pkr-footer"
                   target="_blank"
                 >
-                  Semsm
+                   {t('app_name')}
                 </a>
               </li>
               <li>
@@ -45,7 +49,7 @@ function Footer() {
                   href="https://semsm.substack.com/"
                   target="_blank"
                 >
-                  Blog
+                      {t('footer_blog')}
                 </a>
               </li>
               <li>
@@ -54,15 +58,15 @@ function Footer() {
                   target="_blank"
                 >
                   <i className="fa fa-github" />
-                  Github
+                  {t('footer_github')}
                 </a>
               </li>
             </ul>
           </nav>
           <div className="credits ml-auto">
             <span className="copyright">
-              © {new Date().getFullYear()}, made with{" "}
-              <i className="fa fa-heart heart" /> by Semsm Team
+              © {new Date().getFullYear()},     {t('footer_made')}{" "}
+              <i className="fa fa-heart heart" />     {t('footer_team')}
             </span>
           </div>
         </Row>

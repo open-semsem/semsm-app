@@ -30,18 +30,25 @@ import {
   Row,
   Col,
 } from "reactstrap";
+import { useTranslation } from 'react-i18next';
 
 // core components
-import SemsmNav from "components/Navbars/SemsmNav.js";
-import LandingPageHeader from "components/Headers/LandingPageHeader.js";
- import Subscribe from "components/Subscribe/index.js";
-import Products from "components/products/index.js";
-import About from "components/about/index.js";
-import Team from "components/Team/Team.js";
-import Footer from "components/Footers/Footer.js";
+import LandingPageHeader from "../components/Headers/LandingPageHeader.js";
+import Subscribe from "../components/Subscribe/index.js";
+import Products from "../components/products/index.js";
+import About from "../components/about/index.js";
+import Team from "../components/Team/Team.js";
+import Footer from "../components/Footers/Footer.js";
 import { ToastContainer, toast } from 'react-toastify';
+import Semsm from "../components/bot/Semsm/Semsm.js";
+import WorkCycle from "../components/bot/WorkCycle/index.js";
+import Pricing from "../components/bot/Pricing/Pricing.js";
+import Service from "../components/bot/Service/Service.js";
 import 'react-toastify/dist/ReactToastify.css';
-const notify = () => toast('🦄 Hey, Semsm is still in alpha version and under active developing ', {
+ 
+function LandingPage() {
+  const { t } = useTranslation();
+  const notify = () => toast(t('toast_msg'), {
     position: "top-right",
     autoClose: 50000,
     hideProgressBar: false,
@@ -49,44 +56,47 @@ const notify = () => toast('🦄 Hey, Semsm is still in alpha version and under 
     pauseOnHover: true,
     draggable: true,
     progress: undefined,
-  });
-function LandingPage() {
-  notify();
-  document.documentElement.classList.remove("nav-open");
-  React.useEffect(() => {
-    document.body.classList.add("profile-page");
-    return function cleanup() {
-      document.body.classList.remove("profile-page");
-    };
-  });
+  })();
+  // document.documentElement.classList.remove("nav-open");
+  // React.useEffect(() => {
+  //   document.body.classList.add("profile-page");
+  //   return function cleanup() {
+  //     document.body.classList.remove("profile-page");
+  //   };
+  // });
   return (
-    <>
-      <SemsmNav />
+    <React.Fragment>
       <ToastContainer
-    position="top-right"
-    autoClose={false}
-    newestOnTop={false}
-    closeOnClick
-    rtl={false}
-    pauseOnFocusLoss
-    draggable
-  />
+        position="top-right"
+        autoClose={false}
+        newestOnTop={false}
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+      />
+      {/* <MDBView src={require('../assets/pic/back-header.png')}>
+</MDBView> */}
       <LandingPageHeader />
-    
+
       <div className="main">
-      
-   <About/>
-   <Products/>
-      <Team />
-      <div className="section landing-section">
+        <Semsm />
+        <WorkCycle />
+
+        <Service />
+        <Pricing />
+        <About />
+
+        <Team />
+        <div className="section landing-section">
           <Container>
             <Row>
               <Col className="ml-auto mr-auto" md="8">
-                <h2 className="text-center">Keep in touch?</h2>
+                <h2 className="text-center">{t('landing_keep_in_touch')}</h2>
                 <Form className="contact-form">
                   <Row>
                     <Col md="6">
-                      <label>Name</label>
+                      <label>{t('landing_keep_in_touch_name')}</label>
                       <InputGroup>
                         <InputGroupAddon addonType="prepend">
                           <InputGroupText>
@@ -97,7 +107,7 @@ function LandingPage() {
                       </InputGroup>
                     </Col>
                     <Col md="6">
-                      <label>Email</label>
+                      <label>{t('landing_keep_in_touch_email')}</label>
                       <InputGroup>
                         <InputGroupAddon addonType="prepend">
                           <InputGroupText>
@@ -108,31 +118,31 @@ function LandingPage() {
                       </InputGroup>
                     </Col>
                   </Row>
-                  <label>Message</label>
+                  <label>{t('landing_keep_in_touch_message')}</label>
                   <Input
-                    placeholder="Tell us your thoughts and feelings..."
+                    placeholder={t('landing_keep_in_touch_message_pholder')}
                     type="textarea"
                     rows="4"
                   />
                   <Row>
                     <Col className="ml-auto mr-auto" md="4">
                       <Button className="btn-fill" color="danger" size="lg">
-                        Send Message
+                      {t('landing_keep_in_touch_message_send')}
                       </Button>
                     </Col>
                   </Row>
                 </Form>
               </Col>
             </Row>
-      
-      
+
+
           </Container>
         </div>
       </div>
-      <Subscribe/>
-
+      <Subscribe />
+      <Products />
       <Footer />
-    </>
+    </React.Fragment>
   );
 }
 

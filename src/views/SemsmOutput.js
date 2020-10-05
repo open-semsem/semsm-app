@@ -24,12 +24,16 @@ import {
   Row,
   Col,
 } from "reactstrap";
+import { useTranslation } from 'react-i18next';
+
 // core components
-import SemsmNav from "components/Navbars/SemsmNav.js";
-import Output from "components/bot/chat-output/index";
+ import Output from "../components/bot/chat-output/index";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-const notify = () => toast('🦄 Hey, Semsm is still in alpha version and under active developing ', {
+
+function SemsmOutput() {
+  const { t } = useTranslation();
+  const notify = () => toast(t('toast_msg'), {
     position: "top-right",
     autoClose: 50000,
     hideProgressBar: false,
@@ -37,9 +41,8 @@ const notify = () => toast('🦄 Hey, Semsm is still in alpha version and under 
     pauseOnHover: true,
     draggable: true,
     progress: undefined,
-  });
-function SemsmOutput() {
-  notify();
+  })();
+  // notify();
   React.useEffect(() => {
     document.body.classList.add("profile-page");
     return function cleanup() {
@@ -48,9 +51,8 @@ function SemsmOutput() {
   });
 
   return (
-    <>
-      <SemsmNav />
-      <ToastContainer
+    <React.Fragment>
+       <ToastContainer
     position="top-right"
     autoClose={false}
     newestOnTop={false}
@@ -61,7 +63,7 @@ function SemsmOutput() {
   />
       <Output />
       
-    </>
+    </React.Fragment>
   );
 }
 

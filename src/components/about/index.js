@@ -16,7 +16,7 @@
 * The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
 
 */
-import React from "react";
+import React, { Fragment } from "react";
 // reactstrap components
 import {
   Button,
@@ -24,32 +24,36 @@ import {
   Row,
   Col,
 } from "reactstrap";
+import { useTranslation } from 'react-i18next';
+
 // core components
 const imgUrl = require('../../assets/pic/logo.svg');
 
 function Semsm() {
+  const { t } = useTranslation();
+
   let pageHeader = React.createRef();
 
-  React.useEffect(() => {
-    if (window.innerWidth < 991) {
-      const updateScroll = () => {
-        let windowScrollTop = window.pageYOffset / 3;
-        pageHeader.current.style.transform =
-          "translate3d(0," + windowScrollTop + "px,0)";
-      };
-      window.addEventListener("scroll", updateScroll);
-      return function cleanup() {
-        window.removeEventListener("scroll", updateScroll);
-      };
-    }
-  });
+  // React.useEffect(() => {
+  //   if (window.innerWidth < 991) {
+  //     const updateScroll = () => {
+  //       let windowScrollTop = window.pageYOffset / 3;
+  //       pageHeader.current.style.transform =
+  //         "translate3d(0," + windowScrollTop + "px,0)";
+  //     };
+  //     window.addEventListener("scroll", updateScroll);
+  //     return function cleanup() {
+  //       window.removeEventListener("scroll", updateScroll);
+  //     };
+  //   }
+  // });
 
   return (
-    <>
+    <Fragment>
       <div
         style={{
           backgroundImage:
-            "url(" + require("assets/pic/semsm-home-cave.png") + ")",
+            "url(" + require("../../assets/pic/openSemem1306@2x.png") + ")",
         }}
         className="section-image"
         // data-parallax={true}
@@ -61,11 +65,11 @@ function Semsm() {
             <Row>
 
               <Col md="1"></Col>
-              <Col md="10">
+              <Col md="12">
 
                 <Row className="image-popup-bg" style={{
                   backgroundImage:
-                    "url(" + require("assets/pic/popup.png") + ")",
+                    "url(" + require("../../assets/pic/popup.png") + ")",
                 }}>
                   <Col md="12" className="popup-img-container">
                     <img className="img-semsm "
@@ -75,19 +79,14 @@ function Semsm() {
                     />
                   </Col>
                   <Col md="12" className="popup-txt-container">
-                    <h1 className="white-text text-center">Why Semsm? </h1>
+                    <h1 className="white-text text-center">{t('landing_about_title')} </h1>
                     <br />
                     <h5 className="white-text text-center">
-                    Web3 is like the hidden treasure in Ali Baba's legend which is waiting to be discovered.  
-                    </h5>
+                    {t('landing_about_subtitle1')}                    </h5>
                     <h5 className="white-text text-center">
-                      Semsm, an Arabic word that means in English Sesame, was the magical word to open the cave and change Ali Baba’s life to better.
-                     Our Semsm is playing the same role, helping web3's Ali Babas to access the web3 hidden treasures.
-
-
-                    </h5>
-                    <h5 className="white-text text-center">
-                      Semsm is mainly focusing on increasing the blockchain adoption by building new accessibility tools. </h5>
+                    {t('landing_about_subtitle2')}  </h5>
+                      <h5 className="white-text text-center">
+                    {t('landing_about_subtitle3')} </h5>
 
                     <br />
                     <br />
@@ -110,7 +109,7 @@ function Semsm() {
 
 
       </div>
-    </>
+    </Fragment>
   );
 }
 

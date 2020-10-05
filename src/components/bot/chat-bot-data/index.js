@@ -5,10 +5,15 @@ import ChatBot from "react-simple-chatbot";
 import {
   Button,
 } from "reactstrap";
+import { useTranslation ,withTranslation} from 'react-i18next';
+
  import { GetRepoFromState } from '../../../helper/util'
  import { asyncLocalStorage } from '../../../helper/local-storage'
 import { rest, addNew, addMintable, addParam, addContractFramework, addBlockchainPlatform, addNetwork, addProjectType, addWebFramework, addStandard, addCap, addRepo } from '../../../reducers/botReducers'
+//
+
 class Bot extends Component {
+  
   constructor(props) {
     super();
 
@@ -26,6 +31,7 @@ class Bot extends Component {
     };
     console.log(props, '  this.state');
   }
+
  async handelFinish() {
 
     const repo = GetRepoFromState(this.props);
@@ -44,17 +50,17 @@ class Bot extends Component {
 
   getSteps() {
 
-
+    const { t } = this.props;
     const createDapp = [{
       id: "200",
-      message: "What type of project you want to build?",
+      message: t('chat_createDapp_step_200'),
       trigger: "201",
     },
     {
       id: "201",
       options: [{
         value: 1,
-        label: "I want to create a token",
+        label: t('chat_createDapp_step_201_v_1'),
         trigger: () => {
           this.state.addProjectType("token")
           return "202"
@@ -62,7 +68,7 @@ class Bot extends Component {
       },
       {
         value: 2,
-        label: "I want to create a Voting app",
+        label: t('chat_createDapp_step_201_v_2'),
         trigger: () => {
           this.state.addProjectType("VotingApp")
           return "404"
@@ -70,7 +76,7 @@ class Bot extends Component {
       },
       {
         value: 3,
-        label: "I want to create a Supply chain project",
+        label: t('chat_createDapp_step_201_v_3'),
         trigger: () => {
           this.state.addProjectType("supplyChainApp")
           return "404"
@@ -79,58 +85,56 @@ class Bot extends Component {
       ],
     }, {
       id: "202",
-      message: `This is my favorite part! I might need some details to give you the best result. There are many token standards; a token standard is a set of rules required to implement tokens. 
-  . Do you know the standard you want to use or Would you like me to help with that? 
-  `,
+      message: t('chat_createDapp_step_202'),
       trigger: "203",
     },
     {
       id: "203",
       options: [{
         value: 1,
-        label: "Yes, I know ",
+        label: t('chat_createDapp_step_203_v_1'),
         trigger: "230",
       },
       {
         value: 2,
-        label: " No, I have no idea ",
+        label:t('chat_createDapp_step_203_v_2'),
         trigger: "204",
       },
       {
         value: 3,
-        label: " Not sure, I would  prefer getting help from you",
+        label: t('chat_createDapp_step_203_v_3'),
         trigger: "204",
       },
 
       ],
     }, {
       id: "204",
-      message: `No worries, Is your token is a representation for a unique asset?`,
+      message: t('chat_createDapp_step_204'),
       trigger: "205",
     },
     {
       id: "205",
       options: [{
         value: 1,
-        label: "Yes",
+        label: t('chat_step_Yes'),
         trigger: "240",
       },
       {
         value: 2,
-        label: "No",
+        label: t('chat_step_No'),
         trigger: "206",
       },
       ],
     }, {
       id: "230",
-      message: `Great, Which standard so you want?`,
+      message: t('chat_createDapp_step_230'),
       trigger: "231",
     },
     {
       id: "231",
       options: [{
         value: 1,
-        label: "ERC20",
+        label: t('chat_createDapp_step_231_v_1'),
         trigger: () => {
           this.state.addStandard("ERC20")
           return "210"
@@ -138,7 +142,7 @@ class Bot extends Component {
       },
       {
         value: 2,
-        label: "ERC721",
+        label:  t('chat_createDapp_step_231_v_2'),
         trigger: () => {
           this.state.addStandard("ERC721")
           return "240"
@@ -146,7 +150,7 @@ class Bot extends Component {
       },
       {
         value: 3,
-        label: "ERC1155",
+        label:  t('chat_createDapp_step_231_v_3'),
         trigger: () => {
           this.state.addStandard("ERC1155")
           return "404"
@@ -157,19 +161,19 @@ class Bot extends Component {
 
       , {
       id: "401",
-      message: "working on handling that",
+      message:  t('chat_createDapp_step_401'),
       trigger: "403",
     }
       , {
       id: "404",
-      message: "Under development ",
+      message: t('chat_createDapp_step_404'),
       trigger: "403",
     }
 
       ,
     {
       id: "403",
-      message: "Thanks for your interest, please leave your email and I'll get back to you when we support this feature.",
+      message: t('chat_createDapp_step_403'),
       trigger: "6",
     },
     {
@@ -180,14 +184,14 @@ class Bot extends Component {
     ];
     const network = [{
       id: "450",
-      message: `Do you want to deploy it in Etherem blockchain or another network? `,
+      message: t('chat_network_step_450'),
       trigger: "451",
     },
     {
       id: "451",
       options: [{
         value: 1,
-        label: " Ethereum",
+        label: t('chat_network_step_451_v_1'),
         trigger: () => {
           this.state.addBlockchainPlatform("ethereum")
           return "452"
@@ -195,7 +199,7 @@ class Bot extends Component {
       },
       {
         value: 2,
-        label: "Celo",
+        label: t('chat_network_step_451_v_2'),
         trigger: () => {
           this.state.addBlockchainPlatform("celo")
           return "404"
@@ -203,7 +207,7 @@ class Bot extends Component {
       },
       {
         value: 3,
-        label: "Hyperledger fabric",
+        label: t('chat_network_step_451_v_3'),
         trigger: () => {
           this.state.addBlockchainPlatform("fabric")
           return "404"
@@ -211,7 +215,7 @@ class Bot extends Component {
       },
       {
         value: 4,
-        label: "Corda",
+        label: t('chat_network_step_451_v_4'),
         trigger: () => {
           this.state.addBlockchainPlatform("corda")
           return "404"
@@ -219,21 +223,20 @@ class Bot extends Component {
       },
       {
         value: 5,
-        label: "Other",
+        label: t('chat_network_step_451_v_5'),
         trigger: "4",
       },
       ],
     }, {
       id: "452",
-      message: `which Ethereum of network?
-  `,
+      message: t('chat_network_step_452'),
       trigger: "453",
     },
     {
       id: "453",
       options: [{
         value: 1,
-        label: "  Mainnet",
+        label: t('chat_network_step_453_v_1'),
         trigger: () => {
           this.state.addNetwork("mainnet")
           return "455"
@@ -241,7 +244,7 @@ class Bot extends Component {
       },
       {
         value: 2,
-        label: " Rinkeby ",
+        label: t('chat_network_step_453_v_2'),
         trigger: () => {
           this.state.addNetwork("rinkeby")
           return "455"
@@ -249,7 +252,7 @@ class Bot extends Component {
       },
       {
         value: 3,
-        label: "Ropsten",
+        label: t('chat_network_step_453_v_3'),
         trigger: () => {
           this.state.addNetwork("ropsten")
           return "455"
@@ -257,7 +260,7 @@ class Bot extends Component {
       },
       {
         value: 4,
-        label: "local",
+        label: t('chat_network_step_453_v_4'),
         trigger: () => {
           this.state.addNetwork("local")
           return "455"
@@ -271,14 +274,14 @@ class Bot extends Component {
     const ContractFramework =
       [{
         id: "455",
-        message: "Please select your preferred web framework",
+        message: t('chat_ContractFramework_step_455'),
         trigger: "456",
       },
       {
         id: "456",
         options: [{
           value: 1,
-          label: "Truffle",
+          label: t('chat_ContractFramework_step_456_v_1'),
           trigger: () => {
             this.state.addContractFramework("truffle")
             return "460"
@@ -286,7 +289,7 @@ class Bot extends Component {
         },
         {
           value: 2,
-          label: "Embark",
+          label: t('chat_ContractFramework_step_456_v_2'),
           trigger: () => {
             this.state.addWebFramework("embark")
             return "404"
@@ -299,14 +302,14 @@ class Bot extends Component {
     const webFramework =
       [{
         id: "460",
-        message: "Please select your preferred web framework",
+        message: t('chat_webFramework_step_460'),
         trigger: "461",
       },
       {
         id: "461",
         options: [{
           value: 1,
-          label: "React",
+          label: t('chat_webFramework_step_461_v_1'),
           trigger: () => {
             this.state.addWebFramework("react")
           return "cook"
@@ -314,7 +317,7 @@ class Bot extends Component {
         },
         {
           value: 2,
-          label: "Angular",
+          label: t('chat_webFramework_step_461_v_2'),
           trigger: () => {
             this.state.addWebFramework("angular")
             return "404"
@@ -322,7 +325,7 @@ class Bot extends Component {
         },
         {
           value: 3,
-          label: "React Native",
+          label: t('chat_webFramework_step_461_v_3'),
           trigger: () => {
             this.state.addWebFramework("reactNative")
             return "404"
@@ -330,7 +333,7 @@ class Bot extends Component {
         },
         {
           value: 4,
-          label: "Java script with basic html",
+          label: t('chat_webFramework_step_461_v_4'),
           trigger: () => {
             this.state.addWebFramework("js")
             return "404"
@@ -342,135 +345,135 @@ class Bot extends Component {
       ];
     const decisionMaker = [{
       id: "1001",
-      message: "You don't need blockchain",
+      message: t('chat_decisionMaker_step_1001'),
       trigger: "6",
     },
     {
       id: "98",
-      message: "Did you need a database?",
+      message: t('chat_decisionMaker_step_98'),
       trigger: "99",
     },
     {
       id: "99",
       options: [{
         value: 1,
-        label: "Yes",
+        label: t('chat_step_Yes'),
         trigger: "100",
       },
       {
         value: 2,
-        label: "No",
+        label: t('chat_step_No'),
         trigger: "1001",
       },
       ],
     }, {
       id: "100",
-      message: "Does it require shared write access ",
+      message: t('chat_decisionMaker_step_100'),
       trigger: "101",
     },
     {
       id: "101",
       options: [{
         value: 1,
-        label: "Yes",
+        label: t('chat_step_Yes'),
         trigger: "102",
       },
       {
         value: 2,
-        label: "No",
+        label: t('chat_step_No'),
         trigger: "1001",
       },
       ],
     },
     {
       id: "102",
-      message: "Are writers known and trusted ? ",
+      message: t('chat_decisionMaker_step_102'),
       trigger: "104",
     },
     {
       id: "104",
       options: [{
         value: 1,
-        label: "Yes",
+        label: t('chat_step_Yes'),
         trigger: "105",
       },
       {
         value: 2,
-        label: "No",
+        label: t('chat_step_No'),
         trigger: "107",
       },
       ],
     },
     {
       id: "105",
-      message: "Are writers interests unified?",
+      message: t('chat_decisionMaker_step_1051'),
       trigger: "106",
     },
     {
       id: "106",
       options: [{
         value: 1,
-        label: "Yes",
+        label: t('chat_step_Yes'),
         trigger: "1001",
       },
       {
         value: 2,
-        label: "No",
+        label: t('chat_step_No'),
         trigger: "107",
       },
       ],
     },
     {
       id: "107",
-      message: "Do you need/want to use a trusted third party?",
+      message: t('chat_decisionMaker_step_107'),
       trigger: "108",
     },
     {
       id: "108",
       options: [{
         value: 1,
-        label: "Yes",
+        label: t('chat_step_Yes'),
         trigger: "1001",
       },
       {
         value: 2,
-        label: "No",
+        label: t('chat_step_No'),
         trigger: "109",
       },
       ],
     }, {
       id: "109",
-      message: "Should the record of transactions be mutable?",
+      message: t('chat_decisionMaker_step_109'),
       trigger: "110",
     },
     {
       id: "110",
       options: [{
         value: 1,
-        label: "Yes",
+        label: t('chat_step_Yes'),
         trigger: "1001",
       },
       {
         value: 2,
-        label: "No",
+        label: t('chat_step_No'),
         trigger: "111",
       },
       ],
     }, {
       id: "111",
-      message: "Do you need a control functionality?",
+      message: t('chat_decisionMaker_step_111'),
       trigger: "112",
     },
     {
       id: "112",
       options: [{
         value: 1,
-        label: "Yes",
+        label: t('chat_step_Yes'),
         trigger: "113",
       },
       {
         value: 2,
-        label: "No",
+        label: t('chat_step_No'),
         trigger: "119",
       },
       ],
@@ -479,19 +482,19 @@ class Bot extends Component {
 
       , {
       id: "113",
-      message: "Where is the consensus determined?",
+      message:t('chat_decisionMaker_step_113'),
       trigger: "114",
     },
     {
       id: "114",
       options: [{
         value: 1,
-        label: "Intra firm",
+        label: t('chat_decisionMaker_step_114_v_1'),
         trigger: "115",
       },
       {
         value: 2,
-        label: "Inter firm",
+        label: t('chat_decisionMaker_step_114_v_1'),
         trigger: "117",
       },
       ],
@@ -499,32 +502,32 @@ class Bot extends Component {
 
       , {
       id: "115",
-      message: "Use a private blockchain",
+      message: t('chat_decisionMaker_step_115'),
       trigger: "6",
     }
 
       , {
       id: "117",
-      message: "Use a hybrid blockchain",
+      message: t('chat_decisionMaker_step_117'),
       trigger: "6",
     }
 
 
       , {
       id: "119",
-      message: "Do you want your transaction to be private or public?",
+      message: t('chat_decisionMaker_step_119'),
       trigger: "120",
     },
     {
       id: "120",
       options: [{
         value: 1,
-        label: "Private",
+        label: t('chat_decisionMaker_step_120_v_1'),
         trigger: "113",
       },
       {
         value: 2,
-        label: "Public",
+        label: t('chat_decisionMaker_step_120_v_2'),
         trigger: "121",
       },
       ],
@@ -532,18 +535,18 @@ class Bot extends Component {
 
       , {
       id: "121",
-      message: "Use a public blockchain",
+      message:t('chat_decisionMaker_step_121'),
       trigger: "6",
     }
     ];
     const greetings = [{
       id: "1",
-      message: "Hey there, my name is Semsm & I’m here to help you.",
+      message: t('chat_greetings_step_1'),
       trigger: "2",
     },
     {
       id: "2",
-      message: "How can I help?",
+      message: t('chat_greetings_step_2'),
       trigger: (data)=>{
         console.log(data,'data');
         return "3"
@@ -554,24 +557,24 @@ class Bot extends Component {
 
       options: [{
         value: 1,
-        label: "I want to build a blockchain project",
+        label: t('chat_greetings_step_3_v_1'),
         trigger: "200",
       },
       {
         value: 2,
         disabled:true,
 
-        label: "I want to Learn more about blockchain",
+        label:  t('chat_greetings_step_3_v_2'),
         trigger: "404",
       },
       {
         value: 3,
-        label: "I want to know what is the best blockchain network that suits my project",
+        label:  t('chat_greetings_step_3_v_3'),
         trigger: "98",
       },
       {
         value: 4,
-        label: "No, I have some feedback to leave you",
+        label:  t('chat_greetings_step_3_v_4'),
         trigger: "4",
       },
       ],
@@ -583,17 +586,17 @@ class Bot extends Component {
     },
     {
       id: "5",
-      message: "Thanks for the feedback, please leave your email and I'll get back to you on that.",
+      message: t('chat_greetings_step_5'),
       trigger: "6",
     },
     {
       id: "6",
-      message: "Would you like to restart our discussion or end it ? ",
+      message: t('chat_greetings_step_6'),
       trigger: "7",
     },
     {
       id: "cook",
-      component: <CustomComponent />,
+      component: <CustomComponent t={t} />,
       trigger: ()=>{
         this.handelFinish();
         return "8"
@@ -605,7 +608,7 @@ class Bot extends Component {
 
       options: [{
         value: 1,
-        label: "Restart",
+        label: t('chat_greetings_step_7_v_1'),
         trigger: () => {
           this.state.rest()
           return "1"
@@ -613,7 +616,7 @@ class Bot extends Component {
       },
       {
         value: 2,
-        label: "End",
+        label: t('chat_greetings_step_7_v_2'),
         trigger: "8"
 
         ,
@@ -631,33 +634,32 @@ class Bot extends Component {
 
     const tokenERC20 = [{
       id: "206",
-      message: ` Do you want it to work as a balance?`,
+      message: t('chat_tokenERC20_step_206'),
       trigger: "207",
     },
     {
       id: "207",
       options: [{
         value: 1,
-        label: "Yes",
+        label: t('chat_step_Yes'),
         trigger: "208",
       },
       {
         value: 2,
-        label: "No",
+        label: t('chat_step_No'),
         trigger: "401",
       },
       ],
     }, {
       id: "208",
-      message: `Well, the standard would be ERC20, you can read more about the standard though this link https://www.investopedia.com/news/what-erc20-and-what-does-it-mean-ethereum/
-  `,
+      message: t('chat_tokenERC20_step_208'),
       trigger: "209",
     },
     {
       id: "209",
       options: [{
         value: 1,
-        label: "Yes, it's ERC20",
+        label: t('chat_token_stan_yes'),
         trigger: () => {
           this.state.addStandard("ERC20")
           return "210"
@@ -665,21 +667,20 @@ class Bot extends Component {
       },
       {
         value: 2,
-        label: "No, it is not",
+        label: t('chat_token_stan_no'),
         trigger: "401",
       },
       ],
     }, {
       id: "210",
-      message: `Would you please specify your token name?
-  `,
+      message:t('chat_token_name'),
       trigger: "211",
     },
     {
       id: "211",
       validator: (value) => {
         if (!isNaN(value)) {
-          return 'value must be a text';
+          return t('chat_step_text_validator');
         }
 
         return true;
@@ -693,15 +694,14 @@ class Bot extends Component {
 
     }, {
       id: "212",
-      message: `Would you please specify your token symbol?
-  `,
+      message: t('chat_token_symbol'),
       trigger: "213",
     },
     {
       id: "213",
       validator: (value) => {
         if (!isNaN(value)) {
-          return 'value must be a text';
+          return t('chat_step_text_validator');
         }
 
         return true;
@@ -715,17 +715,15 @@ class Bot extends Component {
 
     }, {
       id: "214",
-      message: `Would you please specify your token  decimal? The default is 18
-  `,
+      message: t('chat_token_decimal'),
       trigger: "215",
     },
     {
       id: "215",
-
       user: true,
       validator: (value) => {
         if (isNaN(value)) {
-          return 'value must be a number';
+          return t('chat_step_number_validator');
         }
 
         return true;
@@ -738,26 +736,25 @@ class Bot extends Component {
 
     }, {
       id: "216",
-      message: `Would you like to limit the issued token by a max cap?`,
+      message: t('chat_token_cap'),
       trigger: "217",
     },
     {
       id: "217",
       options: [{
         value: 1,
-        label: "Yes",
+        label: t('chat_step_Yes'),
         trigger: "218",
       },
       {
         value: 2,
-        label: "No",
+        label: t('chat_step_No'),
         trigger: "219",
       },
       ],
     }, {
       id: "218",
-      message: `Would you please specify your Max Cap?
-  `,
+      message:t('chat_token_max_cap'),
       trigger: "221",
     },
     {
@@ -772,14 +769,14 @@ class Bot extends Component {
 
     }, {
       id: "219",
-      message: `How is the tokens issuance ?`,
+      message: t('chat_token_issuance'),
       trigger: "222",
     },
     {
       id: "222",
       options: [{
         value: 1,
-        label: "Generate token by calling mint function ",
+        label: t('chat_token_mint'),
         trigger: () => {
           this.state.addMintable()
           return "450"
@@ -787,7 +784,7 @@ class Bot extends Component {
       },
       {
         value: 2,
-        label: "Issue all tokens in contract creation and then transfer from contract owner account ",
+        label:t('chat_token_gen_transfer'),
         trigger: "404"
       },
       ],
@@ -796,15 +793,14 @@ class Bot extends Component {
     const tokenERC721 = [
       {
         id: "240",
-        message: `Well, the standard would be ER721, you can read more about the standard though this link https://www.investopedia.com/news/what-erc20-and-what-does-it-mean-ethereum/
-  `,
+        message:t('chat_tokenERC721_step_240'),
         trigger: "242",
       },
       {
         id: "242",
         options: [{
           value: 1,
-          label: "Yes, it's ERC721",
+          label: t('chat_step_Yes'),
           trigger: () => {
             this.state.addStandard("ERC721")
             return "243"
@@ -812,14 +808,13 @@ class Bot extends Component {
         },
         {
           value: 2,
-          label: "No, it is not",
+          label: t('chat_step_no'),
           trigger: "401",
         },
         ],
       }, {
         id: "243",
-        message: `Would you please specify your token name?
-  `,
+        message:t('chat_token_name'),
         trigger: "244",
       },
       {
@@ -834,8 +829,7 @@ class Bot extends Component {
 
       }, {
         id: "245",
-        message: `Would you please specify your token symbol?
-  `,
+        message: t('chat_token_symbol'),
         trigger: "246",
       },
       {
@@ -866,7 +860,7 @@ class Bot extends Component {
       <ChatBot
         // headerTitle="Semsm Chatbot"
         steps={steps}
-        botAvatar={require("assets/pic/logo.svg")}
+        botAvatar={require("../../../assets/pic/logo.svg")}
       // floating
       />
 
@@ -906,15 +900,17 @@ const mapStateToProps = state => {
     cap: state.botReducers.cap
   };
 };
-const SemsmBot = connect(mapStateToProps, mapDispatchToProps)(Bot);
+const semsm = connect(mapStateToProps, mapDispatchToProps)(Bot);
+const SemsmBot = withTranslation()(semsm)
+export default SemsmBot ;
 
-export default SemsmBot;
-
-const CustomComponent = () => (
+const CustomComponent = ({t}) => (
+ 
   <div><Button
   className="btn btn-danger"
   href="/semsm-output"
   // onClick={(e) => e.preventDefault()}
 >
-  take your app                  </Button></div>
+  {t('chat_take_app')}                  </Button></div>
 );
+ 
