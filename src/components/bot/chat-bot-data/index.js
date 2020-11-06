@@ -343,10 +343,174 @@ class Bot extends Component {
         ],
       }
       ];
-      const decisionMaker = [{
+      const networkConsultation = [    
+        // network type 
+        {
+          id: "network_type",
+          message: t('chat_decisionMaker_service_reply_networkType'),
+          trigger: "109",
+        },
+        {
+          id: "109",
+          message: t('chat_decisionMaker_step_109'),
+          trigger: "110",
+        },
+        {
+          id: "110",
+          options: [{
+            value: 1,
+            label: t('chat_step_Yes'),
+            trigger: "1001",
+          },
+          {
+            value: 2,
+            label: t('chat_step_No'),
+            trigger: "111",
+          },
+          ],
+        }, {
+          id: "111",
+          message: t('chat_decisionMaker_step_111'),
+          trigger: "112",
+        },
+        {
+          id: "112",
+          options: [{
+            value: 1,
+            label: t('chat_step_Yes'),
+            trigger: "113",
+          },
+          {
+            value: 2,
+            label: t('chat_step_No'),
+            trigger: "119",
+          },
+          ],
+        }
+    
+    
+          , {
+          id: "113",
+          message:t('chat_decisionMaker_step_113'),
+          trigger: "114",
+        },
+        {
+          id: "114",
+          options: [{
+            value: 1,
+            label: t('chat_decisionMaker_step_114_v_1'),
+            trigger: "115",
+          },
+          {
+            value: 2,
+            label: t('chat_decisionMaker_step_114_v_2'),
+            trigger: "117",
+          },
+          ],
+        }
+    
+          , {
+          id: "115",
+          message: t('chat_decisionMaker_step_115'),
+          trigger: "6",
+        }
+    
+          , {
+          id: "117",
+          message: t('chat_decisionMaker_step_117'),
+          trigger: "116",
+        }
+    
+    
+          , {
+            id: "116",
+            message: t('chat_decisionMaker_step_116'),
+            trigger: "116_a",
+        },
+        {
+          id: "116_a",
+          options: [{
+            value: 1,
+            label: t('chat_step_Yes'),
+            trigger: "116_a_1",
+          },
+          {
+            value: 2,
+            label: t('chat_step_No'),
+            trigger: "116_a_2",
+          },
+          ],
+        }
+    
+          , {
+          id: "116_a_1",
+          message: t('chat_decisionMaker_step_116_answer1'),
+          trigger: "119_a",
+        }
+          , {
+          id: "116_a_2",
+          message: t('chat_decisionMaker_step_116_answer2'),
+          trigger: "119_a",
+        },
+        {
+          id: "120",
+          options: [{
+            value: 1,
+            label: t('chat_decisionMaker_step_120_v_1'),
+            trigger: "113",
+          },
+          {
+            value: 2,
+            label: t('chat_decisionMaker_step_120_v_2'),
+            trigger: "121",
+          },
+          ],
+        }
+    
+          , {
+          id: "119",
+          message: t('chat_decisionMaker_step_119'),
+          trigger: "120",
+        },
+   {
+          id: "119_a",
+          message: t('chat_decisionMaker_step_119'),
+          trigger: "120_a",
+        },
+        {
+          id: "120_a",
+          options: [{
+            value: 1,
+            label: t('chat_decisionMaker_step_120_v_2'),
+            trigger: "121_a",
+          },
+          {
+            value: 2,
+            label: t('chat_decisionMaker_step_120_v_1'),
+            trigger: "121_b",
+          },
+          ],
+        }
+    
+          , {
+          id: "121",
+          message:t('chat_decisionMaker_step_121'),
+          trigger: "platform",
+        }];
+      const consultation = [{
         id: "1001",
         message: t('chat_decisionMaker_step_1001'),
         trigger: "6",
+      },
+      
+      
+      ];
+    const ideaValidationConsultation = [
+      // idea validation
+      {
+        id: "idea_validation",
+        message: t('chat_decisionMaker_service_reply_idea'),
+        trigger: "98",
       },
       {
         id: "98",
@@ -428,6 +592,7 @@ class Bot extends Component {
         message: t('chat_decisionMaker_step_107'),
         trigger: "108",
       },
+    
       {
         id: "108",
         options: [{
@@ -438,165 +603,17 @@ class Bot extends Component {
         {
           value: 2,
           label: t('chat_step_No'),
-          trigger: "109",
+          trigger: "idea_reply",
         },
         ],
-      }, {
-        id: "109",
-        message: t('chat_decisionMaker_step_109'),
-        trigger: "110",
-      },
+      },  {
+        id: "idea_reply",
+        message: t('chat_decisionMaker_service_reply'),
+        trigger: "network_type",
+      }, ]; 
+    const platformConsultation = [  
+      // platform
       {
-        id: "110",
-        options: [{
-          value: 1,
-          label: t('chat_step_Yes'),
-          trigger: "1001",
-        },
-        {
-          value: 2,
-          label: t('chat_step_No'),
-          trigger: "111",
-        },
-        ],
-      }, {
-        id: "111",
-        message: t('chat_decisionMaker_step_111'),
-        trigger: "112",
-      },
-      {
-        id: "112",
-        options: [{
-          value: 1,
-          label: t('chat_step_Yes'),
-          trigger: "113",
-        },
-        {
-          value: 2,
-          label: t('chat_step_No'),
-          trigger: "119",
-        },
-        ],
-      }
-  
-  
-        , {
-        id: "113",
-        message:t('chat_decisionMaker_step_113'),
-        trigger: "114",
-      },
-      {
-        id: "114",
-        options: [{
-          value: 1,
-          label: t('chat_decisionMaker_step_114_v_1'),
-          trigger: "115",
-        },
-        {
-          value: 2,
-          label: t('chat_decisionMaker_step_114_v_2'),
-          trigger: "117",
-        },
-        ],
-      }
-  
-        , {
-        id: "115",
-        message: t('chat_decisionMaker_step_115'),
-        trigger: "6",
-      }
-  
-        , {
-        id: "117",
-        message: t('chat_decisionMaker_step_117'),
-        trigger: "116",
-      }
-  
-  
-        , {
-          id: "116",
-          message: t('chat_decisionMaker_step_116'),
-          trigger: "116_a",
-      },
-      {
-        id: "116_a",
-        options: [{
-          value: 1,
-          label: t('chat_step_Yes'),
-          trigger: "116_a_1",
-        },
-        {
-          value: 2,
-          label: t('chat_step_No'),
-          trigger: "116_a_2",
-        },
-        ],
-      }
-  
-        , {
-        id: "116_a_1",
-        message: t('chat_decisionMaker_step_116_answer1'),
-        trigger: "119_a",
-      }
-        , {
-        id: "116_a_2",
-        message: t('chat_decisionMaker_step_116_answer2'),
-        trigger: "119_a",
-      },
-      {
-        id: "120",
-        options: [{
-          value: 1,
-          label: t('chat_decisionMaker_step_120_v_1'),
-          trigger: "113",
-        },
-        {
-          value: 2,
-          label: t('chat_decisionMaker_step_120_v_2'),
-          trigger: "121",
-        },
-        ],
-      }
-  
-        , {
-        id: "119",
-        message: t('chat_decisionMaker_step_119'),
-        trigger: "120",
-      },
- {
-        id: "119_a",
-        message: t('chat_decisionMaker_step_119'),
-        trigger: "120_a",
-      },
-      {
-        id: "120_a",
-        options: [{
-          value: 1,
-          label: t('chat_decisionMaker_step_120_v_2'),
-          trigger: "121_a",
-        },
-        {
-          value: 2,
-          label: t('chat_decisionMaker_step_120_v_1'),
-          trigger: "121_b",
-        },
-        ],
-      }
-  
-        , {
-        id: "121",
-        message:t('chat_decisionMaker_step_121'),
-        trigger: "122",
-      }
-        
-
-
-
-
-
-      
-      ];
-    const networkRecommendation = [  {
       id: "121_a",
       message:t('chat_decisionMaker_step_121_a'),
       trigger: "6",
@@ -605,16 +622,308 @@ class Bot extends Component {
       id: "121_b",
       message:t('chat_decisionMaker_step_121_b'),
       trigger: "6",
-    },{
+    },
+    {
+      id: "platform",
+      message:t('chat_decisionMaker_service_reply_platform'),
+      trigger: "122",
+    },
+    {
       id: "122",
       message:t('chat_decisionMaker_step_122'),
+      trigger: "123",
+    },
+   
+    {
+      id: "123",
+      options: [{
+        value: 1,
+        label: t('chat_decisionMaker_step_123_v_1'),
+        trigger: "124",
+      },
+      {
+        value: 2,
+        label: t('chat_decisionMaker_step_123_v_2'),
+        trigger: "125",
+      },
+      ],
+    }
+    ,{
+      id: "124",
+      message:t('chat_decisionMaker_step_124'),
+      trigger: "off_chain",
+    },{
+      id: "125",
+      message:t('chat_decisionMaker_step_125'),
+      trigger: "off_chain",
+    }, 
+    {
+      id: "155",
+      message:t('chat_decisionMaker_step_155'),
       trigger: "6",
     },
+   
+
+
+
+
+
     ];
+    const walletConsultation = [// wallet support
+
+      {
+        id: "wallet",
+        message:t('chat_decisionMaker_service_reply_wallet'),
+        trigger: "134",
+      },
+      {
+        id: "134",
+        message:t('chat_decisionMaker_step_134'),
+        trigger: "135",
+      },
+      {
+        id: "135",
+        options: [{
+          value: 1,
+          label: t('chat_decisionMaker_step_135_v_1'),
+          trigger: "136",
+        },
+        {
+          value: 2,
+          label: t('chat_decisionMaker_step_135_v_2'),
+          trigger: "141",
+        },
+        ],
+      },
+      {
+        id: "136",
+        message:t('chat_decisionMaker_step_136'),
+        trigger: "137",
+      },
+      
+      {
+        id: "137",
+        options: [{
+          value: 1,
+          label: t('chat_step_Yes'),
+          trigger: "138",
+        },
+        {
+          value: 2,
+          label: t('chat_step_No'),
+          trigger: "141",
+        },
+        ],
+      },
+      {
+        id: "138",
+        message:t('chat_decisionMaker_step_138'),
+        trigger: "139",
+      }
+      ,
+      {
+        id: "139",
+        message:t('chat_decisionMaker_step_139'),
+        trigger: "140",
+      },
+      
+      {
+        id: "140",
+        options: [{
+          value: 1,
+          label: t('chat_step_Yes'),
+          trigger: "142",
+        },
+        {
+          value: 2,
+          label: t('chat_step_No'),
+          trigger: "142",
+        },
+        ],
+      },
+      {
+        id: "141",
+        message:t('chat_decisionMaker_step_141'),
+        trigger: "142",
+      },
+      {
+        id: "142",
+        message:t('chat_decisionMaker_step_142'),
+        trigger: "143",
+      },
+      
+      {
+        id: "143",
+        options: [{
+          value: 1,
+          label: t('chat_step_Yes'),
+          trigger: "144",
+        },
+        {
+          value: 2,
+          label: t('chat_step_No'),
+          trigger: "145",
+        },
+        ],
+      }
+      ,
+      {
+        id: "144",
+        message:t('chat_decisionMaker_step_144'),
+        trigger: "146",
+      },{
+        id: "145",
+        message:t('chat_decisionMaker_step_145'),
+        trigger: "146",
+      },
+      
+      {
+        id: "146",
+        message:t('chat_decisionMaker_step_146'),
+        trigger: "147",
+      },
+      
+      {
+        id: "147",
+        options: [{
+          value: 1,
+          label: t('chat_step_Yes'),
+          trigger: "148",
+        },
+        {
+          value: 2,
+          label: t('chat_step_No'),
+          trigger: "txt_Cost",
+        },
+        ],
+      },];
+    const offChainConsultation = [
+       // off chain data and fetching external apis
+      {
+        id: "off_chain",
+        message:t('chat_decisionMaker_service_reply_offChain'),
+        trigger: "126",
+      },
+      {
+        id: "126",
+        message:t('chat_decisionMaker_step_126'),
+        trigger: "127",
+      },
+     
+      {
+        id: "127",
+        options: [{
+          value: 1,
+          label: t('chat_step_Yes'),
+          trigger: "128",
+        },
+        {
+          value: 2,
+          label: t('chat_step_No'),
+          trigger: "129",
+        },
+        ],
+      }
+  ,
+      {
+        id: "128",
+        message:t('chat_decisionMaker_step_128'),
+        trigger: "130",
+      },
+      {
+        id: "129",
+        message:t('chat_decisionMaker_step_129'),
+        trigger: "130",
+      },
+  
+      {
+        id: "130",
+        message:t('chat_decisionMaker_step_130'),
+        trigger: "131",
+      },
+      {
+        id: "131",
+        options: [{
+          value: 1,
+          label: t('chat_step_Yes'),
+          trigger: "132",
+        },
+        {
+          value: 2,
+          label: t('chat_step_No'),
+          trigger: "133",
+        },
+        ],
+      }
+  ,
+  
+  {
+    id: "132",
+    message:t('chat_decisionMaker_step_132'),
+    trigger: "wallet",
+  },
+  {
+    id: "133",
+    message:t('chat_decisionMaker_step_133'),
+    trigger: "wallet",
+  },];
+    const txtCostConsultation = [
+      {
+        id: "148",
+        message:t('chat_decisionMaker_step_148'),
+        trigger: "txt_Cost",
+      },
+      // txt cost 
+      
+      {
+        id: "txt_Cost",
+        message:t('chat_decisionMaker_service_reply_txtCost'),
+        trigger: "150",
+      },
+      {
+        id: "150",
+        message:t('chat_decisionMaker_step_150'),
+        trigger: "151",
+      },
+      
+      {
+        id: "151",
+        options: [{
+          value: 1,
+          label: t('chat_decisionMaker_step_151_v_1'),
+          trigger: "152",
+        },
+        {
+          value: 2,
+          label: t('chat_decisionMaker_step_151_v_2'),
+          trigger: "153",
+        },
+        {
+          value: 3,
+          label: t('chat_decisionMaker_step_151_v_3'),
+          trigger: "154",
+        },
+        ],
+      
+      }
+      , {
+        id: "152",
+        message:t('chat_decisionMaker_step_152'),
+        trigger: "155",
+      },
+      {
+        id: "153",
+        message:t('chat_decisionMaker_step_153'),
+        trigger: "155",
+      },{
+        id: "154",
+        message:t('chat_decisionMaker_step_154'),
+        trigger: "155",
+      },];
     const greetings = [{
       id: "1",
       message: t('chat_greetings_step_1'),
-      trigger: "113",
+      trigger: "2",
     },
     {
       id: "2",
@@ -642,7 +951,7 @@ class Bot extends Component {
       {
         value: 3,
         label:  t('chat_greetings_step_3_v_3'),
-        trigger: "98",
+        trigger: "idea_validation",
       },
       {
         value: 4,
@@ -918,7 +1227,7 @@ class Bot extends Component {
     ]
 
 
-    return [].concat(greetings, createDapp, decisionMaker,networkRecommendation, network, ContractFramework, tokenERC20, webFramework, tokenERC721)
+    return [].concat(greetings, createDapp, consultation,ideaValidationConsultation, networkConsultation, platformConsultation, offChainConsultation,txtCostConsultation, walletConsultation, network, ContractFramework, tokenERC20, webFramework, tokenERC721)
 
 
   }

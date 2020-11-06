@@ -71,6 +71,7 @@
    "chat_step_number_validator": "value must be a number",
    "chat_step_Yes": "Yes",
    "chat_step_No": "No",
+   "chat_step_NoCare": "I don't care",
    "chat_greetings_step_1": "Hey there, my name is Semsm & I’m here to help you.",
    "chat_greetings_step_2": "Please select the service",
 
@@ -81,7 +82,7 @@
 
 
    "chat_greetings_step_5": "Thanks for the feedback, please leave your email and I'll get back to you on that.",
-   "chat_greetings_step_6": "Would you like to restart our discussion or end it ?",
+   "chat_greetings_step_6": "This is the end of your selected path, Would you like to restart our discussion or end it ?",
     "chat_greetings_step_7_v_1": "Restart",
    "chat_greetings_step_7_v_2": "End",
    "chat_createDapp_step_200": "What type of project you want to build?",
@@ -166,9 +167,59 @@
    "chat_decisionMaker_step_121_a": "Expose a public apis",
    "chat_decisionMaker_step_121_b": "Don't expose any public apis",
    "chat_decisionMaker_step_121": "Use a public blockchain",
-   
-   "chat_decisionMaker_step_122": "Tell me about the required transaction throughput .",
 
+   "chat_decisionMaker_step_122": "Tell me about the required transaction throughput.",
+   "chat_decisionMaker_step_123_v_1": "I want the fastest throughput",
+   "chat_decisionMaker_step_123_v_2": "I don't care much about transaction speed",
+   "chat_decisionMaker_step_124": "You can use blockchain networks like Matic, loom,Celo, Neo, EOS, or Tron ",
+   "chat_decisionMaker_step_125": "You can use blockchain networks like Ethereum, Bitcoin",
+   "chat_decisionMaker_step_126": "Does your contract handle files, images, audio or video files ?",
+   "chat_decisionMaker_step_128": "  You can't save large data in blockchain so you need to consider using one of the following tools based on your preferences :   Decentralized storage service like IPFS  or Centralized storage service like Amazon S3",
+   "chat_decisionMaker_step_129": "You probably may not need  save your data  off chain ",
+   "chat_decisionMaker_step_130": "Do you need to fetch any External API (outside the blockchain)",
+   "chat_decisionMaker_step_132": "Use tools that manage calling External API like ChainLink",
+   "chat_decisionMaker_step_133": "You don't need any tool",
+   "chat_decisionMaker_step_134": "so tell me about your Dapp",
+   "chat_decisionMaker_step_135_v_1": "It's a web based dapp",
+   "chat_decisionMaker_step_135_v_2": "It's a mobile based dapp ",
+   "chat_decisionMaker_step_136": "Are you okay with depending on browser plugin?",
+   "chat_decisionMaker_step_138": "you use one or all of the following : Metamask,  WalletConnect, torus,  Authereum, BurnerConnect, UniLogin, Portis, Squarelink, Arkane, MEW wallet, D'CENT Wallet,and Bitski",
+   "chat_decisionMaker_step_139": "Do you want to support multiple web3 providers ? (Recommended)",
+   "chat_decisionMaker_step_141": "Use tools like web3modal",
+   "chat_decisionMaker_step_142": "Are you willing to use a paid service web3  provider?",
+   "chat_decisionMaker_step_144": "Use service like Fortmatic",
+   "chat_decisionMaker_step_145": "Create your own custodial wallet ",
+   "chat_decisionMaker_step_146": "Do you want to allow user to buy cryptocurrencies by fiat currencies and vice versa",
+   "chat_decisionMaker_step_148": "Use service like Dharma ",
+   "chat_decisionMaker_step_150": "What is your plan for paying transaction cost?",
+   "chat_decisionMaker_step_151_v_1": "User pays the gas fees with ether",
+   "chat_decisionMaker_step_151_v_2": "User pays the gas fees with tokens",
+   "chat_decisionMaker_step_151_v_3": "Third parties pay the gas fees for the user",
+   "chat_decisionMaker_step_152": "Use normal ways for transactions execution",
+   "chat_decisionMaker_step_153": "consider using GSN or Biconomy",
+   "chat_decisionMaker_step_154": "consider using GSN, , Biconomy or Gnosis",
+   "chat_decisionMaker_step_155": "If you want me to support sending full reports for the consultation service that include full details and recommendation based on your use case , please feel free to reach me out. This will encourage me. ",
+  
+
+
+
+
+   "chat_decisionMaker_service_reply": "Your idea might be a good blockchain use case.",
+   "chat_decisionMaker_service_reply_idea": "Providing a consultation for Idea validation ",
+   "chat_decisionMaker_service_reply_wallet": " Providing a consultation for Wallets integration ",
+   "chat_decisionMaker_service_reply_offChain":  "Providing a consultation for data handling.",
+   "chat_decisionMaker_service_reply_txtCost": "Providing a consultation for Transaction cost",
+   "chat_decisionMaker_service_reply_platform": "Providing a consultation for blockchain platform",
+   "chat_decisionMaker_service_reply_networkType": "Providing a consultation for  blockchain networks type",
+
+   "chat_decisionMaker_service_type_1": "Check if it's a blockchain use case ",
+   "chat_decisionMaker_service_type_2": "Check what type of network I should use",
+   "chat_decisionMaker_service_type_3": "Check the best blockchain platform I should consider",
+   "chat_decisionMaker_service_type_4": "Check the best tools I should consider",
+   "chat_decisionMaker_service_type_4_1": "Wallets",
+   "chat_decisionMaker_service_type_4_2": "Handling data",
+   "chat_decisionMaker_service_type_4_3": "Transactions",
+ 
 
 
    "chat_take_app": " take your app ",
