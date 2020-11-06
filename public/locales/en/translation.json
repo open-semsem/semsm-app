@@ -72,11 +72,14 @@
    "chat_step_Yes": "Yes",
    "chat_step_No": "No",
    "chat_greetings_step_1": "Hey there, my name is Semsm & I’m here to help you.",
-   "chat_greetings_step_2": "How can I help?",
-   "chat_greetings_step_3_v_1": "I want to build a blockchain project",
-   "chat_greetings_step_3_v_2": "I want to Learn more about blockchain",
-   "chat_greetings_step_3_v_3": "I want a consultation regarding the blockchain network that suits my case",
+   "chat_greetings_step_2": "Please select the service",
+
+   "chat_greetings_step_3_v_1": "Workflow automation service",
+   "chat_greetings_step_3_v_2": "Educational guidance service",   
+   "chat_greetings_step_3_v_3": "Consultation service",
    "chat_greetings_step_3_v_4": "No, I have some feedback to leave you",
+
+
    "chat_greetings_step_5": "Thanks for the feedback, please leave your email and I'll get back to you on that.",
    "chat_greetings_step_6": "Would you like to restart our discussion or end it ?",
     "chat_greetings_step_7_v_1": "Restart",
@@ -133,21 +136,41 @@
    "chat_token_gen_transfer": "Issue all tokens in contract creation and then transfer from contract owner account",
    "chat_decisionMaker_step_1001": "You don't need blockchain",
    "chat_decisionMaker_step_98": "Did you need a database?",
-   "chat_decisionMaker_step_100": "Does it require shared write access",
+   "chat_decisionMaker_step_100": "Does it require shared write access?",
    "chat_decisionMaker_step_102": "Are writers known and trusted ?",
    "chat_decisionMaker_step_105": "Are writers interests unified?",
    "chat_decisionMaker_step_107": "Do you need/want to use a trusted third party?",
    "chat_decisionMaker_step_109": "Should the record of transactions be mutable?",
-   "chat_decisionMaker_step_111": "Do you need a control functionality?",
+   
+   "chat_decisionMaker_step_111": " Do you want to limit nodes that create new blocks / make decisions to a list of known nodes ?",
+   "chat_decisionMaker_step_regularNode": " Do you want to limit nodes that hold a copy of the ledger to list of approved nodes ?",
+
+
+
+
    "chat_decisionMaker_step_113": "Where is the consensus determined?",
-   "chat_decisionMaker_step_114_v_1": "Intra firm",
-   "chat_decisionMaker_step_114_v_2": "Inter firm",
-   "chat_decisionMaker_step_115": "Use a private blockchain",
-   "chat_decisionMaker_step_117": "Use a hybrid blockchain",
+   "chat_decisionMaker_step_114_v_1": "Inter firm",
+   "chat_decisionMaker_step_114_v_2": "Intra firm",
+
+  
+ 
+
+   "chat_decisionMaker_step_115": "it's a private blockchain, use any permissioned blockchain network like  hyperledger fabric  quorum or hyperledger besu ",
+   "chat_decisionMaker_step_117": "it's a hybrid blockchain",
+   "chat_decisionMaker_step_116": "Are you handling a sensitive data  and caring much about data confidentiality?",
+   "chat_decisionMaker_step_116_answer1": "use hyperledger fabric and to hide the data entirely use channel between the stakeholders or use quorum or hyperledger besu and encrypt the transactions that you want to hide",
+   "chat_decisionMaker_step_116_answer2": "use any permissioned blockchain network like  hyperledger fabric  quorum or hyperledger besu",
    "chat_decisionMaker_step_119": "Do you want your transaction to be private or public?",
    "chat_decisionMaker_step_120_v_1": "Private",
    "chat_decisionMaker_step_120_v_2": "Public",
+   "chat_decisionMaker_step_121_a": "Expose a public apis",
+   "chat_decisionMaker_step_121_b": "Don't expose any public apis",
    "chat_decisionMaker_step_121": "Use a public blockchain",
+   
+   "chat_decisionMaker_step_122": "Tell me about the required transaction throughput .",
+
+
+
    "chat_take_app": " take your app ",
    "output_cooking": "Cooking your meal …….. ",
    "output_cooking_wait": "Please wait it will take several minutes ...",

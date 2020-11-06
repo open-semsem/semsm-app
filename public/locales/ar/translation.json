@@ -138,16 +138,27 @@
       "chat_decisionMaker_step_105": "هل ماصلح الذين يكتبون واحده ؟",
       "chat_decisionMaker_step_107": "هل تحتاج / تريد اﻻعتماد على طرف ثالث موثوق به؟",
       "chat_decisionMaker_step_109": "هل يجب أن يكون سجل المعاملات قابل للتغيير؟",
-      "chat_decisionMaker_step_111": "هل تحتاج إلى وظيفة تحكم؟",
+      "chat_decisionMaker_step_111": "هل ترغب في تقييد العقد التي تنشئ كتلًا جديدة / تتخذ قرارات لقائمة من العقد المعروفة؟",
+      "chat_decisionMaker_step_regularNode": "هل تريد تقييد العقد التي تحتوي على نسخة من الدفتر  بقائمة  من العقد المعتمدة؟",
       "chat_decisionMaker_step_113": "أين يتم تحديد الإجماع؟",
       "chat_decisionMaker_step_114_v_1": "داخل المؤسسه",
       "chat_decisionMaker_step_114_v_2": "بين المؤسسات",
-      "chat_decisionMaker_step_115": "استخدم شبكة البلوك تشين الخاصه",
-      "chat_decisionMaker_step_117": "استخدم شبكة البلوك تشين المهجنة",
+      "chat_decisionMaker_step_115": "استخدام أي شبكة بلوك تشين permissioned مثل hyperledger fabric quorum أو hyperledger besu، انها شبكة البلوك تشين الخاصه",
+      "chat_decisionMaker_step_117": "انها شبكة البلوك تشين المهجنة",
+      "chat_decisionMaker_step_116": "هل تتعامل مع بيانات حساسة وتهتم كثيرًا بسرية البيانات؟",
+      "chat_decisionMaker_step_116_answer1": " استخدم  hyperledger fabric ولإخفاء البيانات تمامًا ، استخدم القناة  channel بين أصحاب المصلحة أو استخدم quorum  أو hyperledger besu بجانب تشفير المعاملات التي تريد إخفاءها",
+      "chat_decisionMaker_step_116_answer2": "استخدام أي شبكة بلوك تشين permissioned مثل hyperledger fabric quorum أو hyperledger besu",
       "chat_decisionMaker_step_119": "هل تريد أن تكون المعاملات خاصة أم عامة؟",
       "chat_decisionMaker_step_120_v_1": "خاص",
       "chat_decisionMaker_step_120_v_2": "عام",
+      "chat_decisionMaker_step_121_a": "انشر public apis",
+      "chat_decisionMaker_step_121_b": "ﻻ تنشر اى  public apis",
       "chat_decisionMaker_step_121": "استخدم شبكة البلوك تشين العامه",
+
+
+
+
+
       "chat_take_app": "احصل على التطبيق",
       "output_cooking": "جارى اﻻعداد .....",
       "output_cooking_wait": "الرجاء الانتظار سيستغرق الأمر عدة دقائق ...",

@@ -343,206 +343,278 @@ class Bot extends Component {
         ],
       }
       ];
-    const decisionMaker = [{
-      id: "1001",
-      message: t('chat_decisionMaker_step_1001'),
+      const decisionMaker = [{
+        id: "1001",
+        message: t('chat_decisionMaker_step_1001'),
+        trigger: "6",
+      },
+      {
+        id: "98",
+        message: t('chat_decisionMaker_step_98'),
+        trigger: "99",
+      },
+      {
+        id: "99",
+        options: [{
+          value: 1,
+          label: t('chat_step_Yes'),
+          trigger: "100",
+        },
+        {
+          value: 2,
+          label: t('chat_step_No'),
+          trigger: "1001",
+        },
+        ],
+      }, {
+        id: "100",
+        message: t('chat_decisionMaker_step_100'),
+        trigger: "101",
+      },
+      {
+        id: "101",
+        options: [{
+          value: 1,
+          label: t('chat_step_Yes'),
+          trigger: "102",
+        },
+        {
+          value: 2,
+          label: t('chat_step_No'),
+          trigger: "1001",
+        },
+        ],
+      },
+      {
+        id: "102",
+        message: t('chat_decisionMaker_step_102'),
+        trigger: "104",
+      },
+      {
+        id: "104",
+        options: [{
+          value: 1,
+          label: t('chat_step_Yes'),
+          trigger: "105",
+        },
+        {
+          value: 2,
+          label: t('chat_step_No'),
+          trigger: "107",
+        },
+        ],
+      },
+      {
+        id: "105",
+        message: t('chat_decisionMaker_step_1051'),
+        trigger: "106",
+      },
+      {
+        id: "106",
+        options: [{
+          value: 1,
+          label: t('chat_step_Yes'),
+          trigger: "1001",
+        },
+        {
+          value: 2,
+          label: t('chat_step_No'),
+          trigger: "107",
+        },
+        ],
+      },
+      {
+        id: "107",
+        message: t('chat_decisionMaker_step_107'),
+        trigger: "108",
+      },
+      {
+        id: "108",
+        options: [{
+          value: 1,
+          label: t('chat_step_Yes'),
+          trigger: "1001",
+        },
+        {
+          value: 2,
+          label: t('chat_step_No'),
+          trigger: "109",
+        },
+        ],
+      }, {
+        id: "109",
+        message: t('chat_decisionMaker_step_109'),
+        trigger: "110",
+      },
+      {
+        id: "110",
+        options: [{
+          value: 1,
+          label: t('chat_step_Yes'),
+          trigger: "1001",
+        },
+        {
+          value: 2,
+          label: t('chat_step_No'),
+          trigger: "111",
+        },
+        ],
+      }, {
+        id: "111",
+        message: t('chat_decisionMaker_step_111'),
+        trigger: "112",
+      },
+      {
+        id: "112",
+        options: [{
+          value: 1,
+          label: t('chat_step_Yes'),
+          trigger: "113",
+        },
+        {
+          value: 2,
+          label: t('chat_step_No'),
+          trigger: "119",
+        },
+        ],
+      }
+  
+  
+        , {
+        id: "113",
+        message:t('chat_decisionMaker_step_113'),
+        trigger: "114",
+      },
+      {
+        id: "114",
+        options: [{
+          value: 1,
+          label: t('chat_decisionMaker_step_114_v_1'),
+          trigger: "115",
+        },
+        {
+          value: 2,
+          label: t('chat_decisionMaker_step_114_v_2'),
+          trigger: "117",
+        },
+        ],
+      }
+  
+        , {
+        id: "115",
+        message: t('chat_decisionMaker_step_115'),
+        trigger: "6",
+      }
+  
+        , {
+        id: "117",
+        message: t('chat_decisionMaker_step_117'),
+        trigger: "116",
+      }
+  
+  
+        , {
+          id: "116",
+          message: t('chat_decisionMaker_step_116'),
+          trigger: "116_a",
+      },
+      {
+        id: "116_a",
+        options: [{
+          value: 1,
+          label: t('chat_step_Yes'),
+          trigger: "116_a_1",
+        },
+        {
+          value: 2,
+          label: t('chat_step_No'),
+          trigger: "116_a_2",
+        },
+        ],
+      }
+  
+        , {
+        id: "116_a_1",
+        message: t('chat_decisionMaker_step_116_answer1'),
+        trigger: "119_a",
+      }
+        , {
+        id: "116_a_2",
+        message: t('chat_decisionMaker_step_116_answer2'),
+        trigger: "119_a",
+      },
+      {
+        id: "120",
+        options: [{
+          value: 1,
+          label: t('chat_decisionMaker_step_120_v_1'),
+          trigger: "113",
+        },
+        {
+          value: 2,
+          label: t('chat_decisionMaker_step_120_v_2'),
+          trigger: "121",
+        },
+        ],
+      }
+  
+        , {
+        id: "119",
+        message: t('chat_decisionMaker_step_119'),
+        trigger: "120",
+      },
+ {
+        id: "119_a",
+        message: t('chat_decisionMaker_step_119'),
+        trigger: "120_a",
+      },
+      {
+        id: "120_a",
+        options: [{
+          value: 1,
+          label: t('chat_decisionMaker_step_120_v_2'),
+          trigger: "121_a",
+        },
+        {
+          value: 2,
+          label: t('chat_decisionMaker_step_120_v_1'),
+          trigger: "121_b",
+        },
+        ],
+      }
+  
+        , {
+        id: "121",
+        message:t('chat_decisionMaker_step_121'),
+        trigger: "122",
+      }
+        
+
+
+
+
+
+      
+      ];
+    const networkRecommendation = [  {
+      id: "121_a",
+      message:t('chat_decisionMaker_step_121_a'),
+      trigger: "6",
+    }
+      , {
+      id: "121_b",
+      message:t('chat_decisionMaker_step_121_b'),
+      trigger: "6",
+    },{
+      id: "122",
+      message:t('chat_decisionMaker_step_122'),
       trigger: "6",
     },
-    {
-      id: "98",
-      message: t('chat_decisionMaker_step_98'),
-      trigger: "99",
-    },
-    {
-      id: "99",
-      options: [{
-        value: 1,
-        label: t('chat_step_Yes'),
-        trigger: "100",
-      },
-      {
-        value: 2,
-        label: t('chat_step_No'),
-        trigger: "1001",
-      },
-      ],
-    }, {
-      id: "100",
-      message: t('chat_decisionMaker_step_100'),
-      trigger: "101",
-    },
-    {
-      id: "101",
-      options: [{
-        value: 1,
-        label: t('chat_step_Yes'),
-        trigger: "102",
-      },
-      {
-        value: 2,
-        label: t('chat_step_No'),
-        trigger: "1001",
-      },
-      ],
-    },
-    {
-      id: "102",
-      message: t('chat_decisionMaker_step_102'),
-      trigger: "104",
-    },
-    {
-      id: "104",
-      options: [{
-        value: 1,
-        label: t('chat_step_Yes'),
-        trigger: "105",
-      },
-      {
-        value: 2,
-        label: t('chat_step_No'),
-        trigger: "107",
-      },
-      ],
-    },
-    {
-      id: "105",
-      message: t('chat_decisionMaker_step_1051'),
-      trigger: "106",
-    },
-    {
-      id: "106",
-      options: [{
-        value: 1,
-        label: t('chat_step_Yes'),
-        trigger: "1001",
-      },
-      {
-        value: 2,
-        label: t('chat_step_No'),
-        trigger: "107",
-      },
-      ],
-    },
-    {
-      id: "107",
-      message: t('chat_decisionMaker_step_107'),
-      trigger: "108",
-    },
-    {
-      id: "108",
-      options: [{
-        value: 1,
-        label: t('chat_step_Yes'),
-        trigger: "1001",
-      },
-      {
-        value: 2,
-        label: t('chat_step_No'),
-        trigger: "109",
-      },
-      ],
-    }, {
-      id: "109",
-      message: t('chat_decisionMaker_step_109'),
-      trigger: "110",
-    },
-    {
-      id: "110",
-      options: [{
-        value: 1,
-        label: t('chat_step_Yes'),
-        trigger: "1001",
-      },
-      {
-        value: 2,
-        label: t('chat_step_No'),
-        trigger: "111",
-      },
-      ],
-    }, {
-      id: "111",
-      message: t('chat_decisionMaker_step_111'),
-      trigger: "112",
-    },
-    {
-      id: "112",
-      options: [{
-        value: 1,
-        label: t('chat_step_Yes'),
-        trigger: "113",
-      },
-      {
-        value: 2,
-        label: t('chat_step_No'),
-        trigger: "119",
-      },
-      ],
-    }
-
-
-      , {
-      id: "113",
-      message:t('chat_decisionMaker_step_113'),
-      trigger: "114",
-    },
-    {
-      id: "114",
-      options: [{
-        value: 1,
-        label: t('chat_decisionMaker_step_114_v_1'),
-        trigger: "115",
-      },
-      {
-        value: 2,
-        label: t('chat_decisionMaker_step_114_v_1'),
-        trigger: "117",
-      },
-      ],
-    }
-
-      , {
-      id: "115",
-      message: t('chat_decisionMaker_step_115'),
-      trigger: "6",
-    }
-
-      , {
-      id: "117",
-      message: t('chat_decisionMaker_step_117'),
-      trigger: "6",
-    }
-
-
-      , {
-      id: "119",
-      message: t('chat_decisionMaker_step_119'),
-      trigger: "120",
-    },
-    {
-      id: "120",
-      options: [{
-        value: 1,
-        label: t('chat_decisionMaker_step_120_v_1'),
-        trigger: "113",
-      },
-      {
-        value: 2,
-        label: t('chat_decisionMaker_step_120_v_2'),
-        trigger: "121",
-      },
-      ],
-    }
-
-      , {
-      id: "121",
-      message:t('chat_decisionMaker_step_121'),
-      trigger: "6",
-    }
     ];
     const greetings = [{
       id: "1",
       message: t('chat_greetings_step_1'),
-      trigger: "2",
+      trigger: "113",
     },
     {
       id: "2",
@@ -846,7 +918,7 @@ class Bot extends Component {
     ]
 
 
-    return [].concat(greetings, createDapp, decisionMaker, network, ContractFramework, tokenERC20, webFramework, tokenERC721)
+    return [].concat(greetings, createDapp, decisionMaker,networkRecommendation, network, ContractFramework, tokenERC20, webFramework, tokenERC721)
 
 
   }
