@@ -80,7 +80,7 @@
       "chat_greetings_step_3_v_3": "أريد استشارة بشأن شبكة البلوك تشين المناسبة لى ",
       "chat_greetings_step_3_v_4": "فقط اريد ان اترك تعقيب",
       "chat_greetings_step_5": "شكرًا على تعقيبك الكريم ، يرجى ترك بريدك الإلكتروني وسأتواصل معك  بشأن ذلك.",
-      "chat_greetings_step_6": "هل توّد اﻹعادة ام اﻹنهاء",
+      "chat_greetings_step_6": "هذا نهاية المسار الذي اخترته ، هل توّد اﻹعادة ام اﻹنهاء",
       "chat_greetings_step_7_v_1": "إعادة",
       "chat_greetings_step_7_v_2": "إنهاء",
       "chat_createDapp_step_200": "ما نوع المشروع الذى تود انشاؤه",
@@ -156,6 +156,58 @@
       "chat_decisionMaker_step_121": "استخدم شبكة البلوك تشين العامه",
 
 
+      "chat_decisionMaker_step_122": "أخبرني عن معدل نقل البيانات المطلوب.",
+      "chat_decisionMaker_step_123_v_1": "أريد اﻷسرع إنتاجية",
+      "chat_decisionMaker_step_123_v_2": "لا أهتم كثيرًا بسرعة المعاملة",
+      "chat_decisionMaker_step_124": "يمكنك استخدام شبكات بلوك تشين مثل Matic أو loom أو Celo أو Neo أو EOS أو Tron",
+      "chat_decisionMaker_step_125": "يمكنك استخدام شبكات بلوك تشين مثل Ethereum و Bitcoin",
+      "chat_decisionMaker_step_126": "هل يتعامل عقدك مع الملفات أو الصور أو ملفات الصوت أو الفيديو؟",
+      "chat_decisionMaker_step_128": " لا يمكنك حفظ بيانات كبيرة في بلوك تشين لذا عليك التفكير في استخدام إحدى الأدوات التالية بناءً على تفضيلاتك: خدمة التخزين اللامركزية مثل IPFS أو خدمة التخزين المركزية مثل Amazon S3",
+      "chat_decisionMaker_step_129": "ربما لا تحتاج إلى حفظ بياناتك off chain ",
+      "chat_decisionMaker_step_130": "هل تحتاج إلى استدعاء أي API خارجي (خارج بلوك تشين)",
+      "chat_decisionMaker_step_132": "استخدم الأدوات التي تدير استدعاء API الخارجي مثل ChainLink",
+      "chat_decisionMaker_step_133": "لا تحتاج إلى أي أداة",
+      "chat_decisionMaker_step_134": "حسناَ، أخبرنى عن تطبيقك اللامركزى",
+      "chat_decisionMaker_step_135_v_1": "إنه تطبيق قائم على الويب",
+      "chat_decisionMaker_step_135_v_2": "إنه تطبيق  قائم على الأجهزة المحمولة ",
+      "chat_decisionMaker_step_136": "هل نوافق على الاعتماد على البرنامج المساعد للمتصفح؟ plugin?",
+      "chat_decisionMaker_step_138": "يمكنك استخدام واحد أو كل ما يلي: Metamask و WalletConnect و torus و Authereum و BurnerConnect و UniLogin و Portis و Squarelink و Arkane و MEW wallet و D'CENT Wallet و Bitski",
+      "chat_decisionMaker_step_139": "هل تريد دعم العديد من موفري ويب 3 (موصى به)",
+      "chat_decisionMaker_step_141": "استخدم أدوات مثل web3modal",
+      "chat_decisionMaker_step_142": "هل أنت على استعداد لاستخدام مزود خدمة ويب 3 مدفوعة؟",
+      "chat_decisionMaker_step_144": "استخدم خدمة مثل Fortmatic",
+      "chat_decisionMaker_step_145": "قم بإنشاء محفظتك  الخاصة ",
+      "chat_decisionMaker_step_146": "هل تريد السماح للمستخدم بشراء العملات المشفرة بالعملات الورقية والعكس صحيح ?",
+      "chat_decisionMaker_step_148": "استخدم خدمة مثل  Dharma ",
+      "chat_decisionMaker_step_150": "ما هي خطتك لدفع تكلفة المعاملة؟",
+      "chat_decisionMaker_step_151_v_1": "يدفع المستخدم رسوم الغاز باستخدام  ether",
+      "chat_decisionMaker_step_151_v_2": "يدفع المستخدم رسوم الغاز باستخدام الرموز المميزة",
+      "chat_decisionMaker_step_151_v_3": "تدفع أطراف ثالثة رسوم الغاز للمستخدم",
+      "chat_decisionMaker_step_152": "استخدم الطرق العادية لتنفيذ المعاملات",
+      "chat_decisionMaker_step_153": "فكر في استخدام GSN أو Biconomy",
+      "chat_decisionMaker_step_154": "فكر في استخدام GSN أو Biconomy أو Gnosis",
+      "chat_decisionMaker_step_155": "إذا كنت تريد مني دعم إرسال تقارير كاملة لخدمة الاستشارة تتضمن التفاصيل الكاملة والتوصيات بناءً على حالة الاستخدام الخاصة بك ، فلا تتردد في التواصل معي. هذا سوف يشجعني. ",
+     
+   
+   
+   
+      "chat_decisionMaker_service_reply": "قد تكون فكرتك حالة جيدة لاستخدام بلوك تشين",
+      "chat_decisionMaker_service_reply_idea": "تقديم استشارة للتحقق من صحة الفكرة. ",
+      "chat_decisionMaker_service_reply_wallet": " تقديم استشارة للتكامل مع المحافظ",
+      "chat_decisionMaker_service_reply_offChain":  "تقديم استشارة لمعالجة البيانات ",
+      "chat_decisionMaker_service_reply_txtCost": "تقديم استشارة لتكلفة المعاملة",
+      "chat_decisionMaker_service_reply_platform": "تقديم استشارة لاختيار منصة بلوك تشين ",
+      "chat_decisionMaker_service_reply_networkType": "تقديم استشارة بخصوص نوع شبكات بلوك تشين",
+   
+      "chat_decisionMaker_service_type_1": "Check if it's a blockchain use case ",
+      "chat_decisionMaker_service_type_2": "Check what type of network I should use",
+      "chat_decisionMaker_service_type_3": "Check the best blockchain platform I should consider",
+      "chat_decisionMaker_service_type_4": "Check the best tools I should consider",
+      "chat_decisionMaker_service_type_4_1": "Wallets",
+      "chat_decisionMaker_service_type_4_2": "Handling data",
+      "chat_decisionMaker_service_type_4_3": "Transactions",
+    
+   
 
 
 
