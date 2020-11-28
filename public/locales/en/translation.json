@@ -1,7 +1,9 @@
 {
   "app_name": "Semsm",
+  "menu_tree": "Decision Tree",
   "menu_feature": "Features",
   "menu_pricing": "Pricing",
+  "menu_service": "Services",
   "menu_team": "Team",
    "menu_bot": "Semsm BOT",
   "menu_cli": "Semsm CLI",
@@ -141,7 +143,7 @@
    "chat_decisionMaker_step_102": "Are writers known and trusted ?",
    "chat_decisionMaker_step_105": "Are writers interests unified?",
    "chat_decisionMaker_step_107": "Do you need/want to use a trusted third party?",
-   "chat_decisionMaker_step_109": "Should the record of transactions be mutable?",
+   "chat_decisionMaker_step_109": "Should the record of transactions be immutable?",
    
    "chat_decisionMaker_step_111": " Do you want to limit nodes that create new blocks / make decisions to a list of known nodes ?",
    "chat_decisionMaker_step_regularNode": " Do you want to limit nodes that hold a copy of the ledger to list of approved nodes ?",
@@ -156,23 +158,30 @@
   
  
 
+   "chat_decisionMaker_step_115_a": "it's a private permissionless blockchain, e.g. private Ethereum network in the cloud ",
    "chat_decisionMaker_step_115": "it's a private blockchain, use any permissioned blockchain network like  hyperledger fabric  quorum or hyperledger besu ",
    "chat_decisionMaker_step_117": "it's a hybrid blockchain",
    "chat_decisionMaker_step_116": "Are you handling a sensitive data  and caring much about data confidentiality?",
    "chat_decisionMaker_step_116_answer1": "use hyperledger fabric and to hide the data entirely use channel between the stakeholders or use quorum or hyperledger besu and encrypt the transactions that you want to hide",
    "chat_decisionMaker_step_116_answer2": "use any permissioned blockchain network like  hyperledger fabric  quorum or hyperledger besu",
-   "chat_decisionMaker_step_119": "Do you want your transaction to be private or public?",
+   "chat_decisionMaker_step_119": "Do you want to control who can join to the network?",
+   "chat_decisionMaker_step_119_a": "Do you want your transaction to be private or public?",
    "chat_decisionMaker_step_120_v_1": "Private",
    "chat_decisionMaker_step_120_v_2": "Public",
    "chat_decisionMaker_step_121_a": "Expose a public apis",
    "chat_decisionMaker_step_121_b": "Don't expose any public apis",
-   "chat_decisionMaker_step_121": "Use a public blockchain",
 
+   "chat_decisionMaker_step_121": "Use a public blockchain",
+   "chat_decisionMaker_step_121_permissioned": "Use a public blockchain permissioned network like Corda",
+   "chat_decisionMaker_step_121_permissionless": "Use a public blockchain permissionless network like Ethereum or Bitcoin",
+
+   "chat_decisionMaker_step_122_SC": "Do you want Smart contract functionality?",
    "chat_decisionMaker_step_122": "Tell me about the required transaction throughput.",
    "chat_decisionMaker_step_123_v_1": "I want the fastest throughput",
    "chat_decisionMaker_step_123_v_2": "I don't care much about transaction speed",
    "chat_decisionMaker_step_124": "You can use blockchain networks like Matic, loom,Celo, Neo, EOS, or Tron ",
-   "chat_decisionMaker_step_125": "You can use blockchain networks like Ethereum, Bitcoin",
+   "chat_decisionMaker_step_125_no_sm": "You can use blockchain networks like  Bitcoin",
+   "chat_decisionMaker_step_125": "You can use blockchain networks like Ethereum",
    "chat_decisionMaker_step_126": "Does your contract handle files, images, audio or video files ?",
    "chat_decisionMaker_step_128": "  You can't save large data in blockchain so you need to consider using one of the following tools based on your preferences :   Decentralized storage service like IPFS  or Centralized storage service like Amazon S3",
    "chat_decisionMaker_step_129": "You probably may not need  save your data  off chain ",
@@ -211,6 +220,14 @@
    "chat_decisionMaker_service_reply_txtCost": "Providing a consultation for Transaction cost",
    "chat_decisionMaker_service_reply_platform": "Providing a consultation for blockchain platform",
    "chat_decisionMaker_service_reply_networkType": "Providing a consultation for  blockchain networks type",
+  
+  
+   "idea_validation": "Idea validation ",
+   "Wallets_Integration": " Wallets Integration ",
+   "handle_offChain":  "Handling Data.",
+   "txtCost": "Transaction cost",
+   "select_platform": "Select Blockchain platform",
+   "select_networkType": "Select Blockchain networks type",
 
    "chat_decisionMaker_service_type_1": "Check if it's a blockchain use case ",
    "chat_decisionMaker_service_type_2": "Check what type of network I should use",

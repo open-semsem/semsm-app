@@ -348,27 +348,9 @@ class Bot extends Component {
         {
           id: "network_type",
           message: t('chat_decisionMaker_service_reply_networkType'),
-          trigger: "109",
+          trigger: "111",
         },
         {
-          id: "109",
-          message: t('chat_decisionMaker_step_109'),
-          trigger: "110",
-        },
-        {
-          id: "110",
-          options: [{
-            value: 1,
-            label: t('chat_step_Yes'),
-            trigger: "1001",
-          },
-          {
-            value: 2,
-            label: t('chat_step_No'),
-            trigger: "111",
-          },
-          ],
-        }, {
           id: "111",
           message: t('chat_decisionMaker_step_111'),
           trigger: "112",
@@ -456,17 +438,22 @@ class Bot extends Component {
           id: "120",
           options: [{
             value: 1,
-            label: t('chat_decisionMaker_step_120_v_1'),
+            label: t('chat_step_No'),
             trigger: "113",
           },
           {
             value: 2,
-            label: t('chat_decisionMaker_step_120_v_2'),
+            label: t('chat_step_Yes'),
             trigger: "121",
           },
           ],
         }
     
+          , {
+          id: "115_a",
+          message: t('chat_decisionMaker_step_115_a'),
+          trigger: "119_a",
+        }
           , {
           id: "119",
           message: t('chat_decisionMaker_step_119'),
@@ -474,7 +461,7 @@ class Bot extends Component {
         },
    {
           id: "119_a",
-          message: t('chat_decisionMaker_step_119'),
+          message: t('chat_decisionMaker_step_119_a'),
           trigger: "120_a",
         },
         {
@@ -570,7 +557,7 @@ class Bot extends Component {
       },
       {
         id: "105",
-        message: t('chat_decisionMaker_step_1051'),
+        message: t('chat_decisionMaker_step_105'),
         trigger: "106",
       },
       {
@@ -603,10 +590,30 @@ class Bot extends Component {
         {
           value: 2,
           label: t('chat_step_No'),
-          trigger: "idea_reply",
+          trigger: "109",
         },
         ],
-      },  {
+      }, 
+      {
+        id: "109",
+        message: t('chat_decisionMaker_step_109'),
+        trigger: "110",
+      },
+      {
+        id: "110",
+        options: [{
+          value: 1,
+          label: t('chat_step_Yes'),
+          trigger: "idea_reply",
+        },
+        {
+          value: 2,
+          label: t('chat_step_No'),
+          trigger: "1001",
+        },
+        ],
+      },
+      {
         id: "idea_reply",
         message: t('chat_decisionMaker_service_reply'),
         trigger: "network_type",
@@ -616,18 +623,38 @@ class Bot extends Component {
       {
       id: "121_a",
       message:t('chat_decisionMaker_step_121_a'),
-      trigger: "6",
+      trigger: "platform",
     }
       , {
       id: "121_b",
       message:t('chat_decisionMaker_step_121_b'),
-      trigger: "6",
+      trigger: "platform",
     },
     {
       id: "platform",
       message:t('chat_decisionMaker_service_reply_platform'),
-      trigger: "122",
+      trigger: "122_sm",
     },
+    {
+      id: "122_sm",
+      message: t('chat_decisionMaker_step_122_SC'),
+      trigger: "122_sm_q",
+    },
+    {
+      id: "122_sm_q",
+      options: [{
+        value: 1,
+        label: t('chat_step_Yes'),
+        trigger: "122",
+      },
+      {
+        value: 2,
+        label: t('chat_step_No'),
+        trigger: "125_no_sm",
+      },
+      ],
+    },
+   
     {
       id: "122",
       message:t('chat_decisionMaker_step_122'),
@@ -652,9 +679,15 @@ class Bot extends Component {
       id: "124",
       message:t('chat_decisionMaker_step_124'),
       trigger: "off_chain",
-    },{
+    },
+    {
       id: "125",
       message:t('chat_decisionMaker_step_125'),
+      trigger: "off_chain",
+    }, 
+    {
+      id: "125_no_sm",
+      message:t('chat_decisionMaker_step_125_no_sm'),
       trigger: "off_chain",
     }, 
     {
@@ -691,7 +724,7 @@ class Bot extends Component {
         {
           value: 2,
           label: t('chat_decisionMaker_step_135_v_2'),
-          trigger: "141",
+          trigger: "142",
         },
         ],
       },
