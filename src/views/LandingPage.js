@@ -44,6 +44,7 @@ import Semsm from "../components/bot/Semsm/Semsm.js";
 import WorkCycle from "../components/bot/WorkCycle/index.js";
 import Pricing from "../components/bot/Pricing/Pricing.js";
 import Service from "../components/bot/Service/Service.js";
+import ServiceTree from "../components/bot/Service-Tree/index";
 import 'react-toastify/dist/ReactToastify.css';
  
 function LandingPage() {
@@ -84,6 +85,7 @@ function LandingPage() {
         <WorkCycle />
 
         <Service />
+        <ServiceTree />
         <Pricing />
         <About />
 

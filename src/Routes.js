@@ -4,6 +4,7 @@ import SemsmChat from "./views/SemsmChat.js";
 import SemsmOutput from "./views/SemsmOutput.js";
 // import SemsmBot from "./views/SemsmBot.js";
 import LandingPage from "./views/LandingPage.js";
+import SemsmVisualTreeView from "./views/SemsmVisualTreeView.js";
 
 class Routes extends React.Component {
     render() {
@@ -16,6 +17,10 @@ class Routes extends React.Component {
                 <Route
                     path="/chat"
                     render={(props) => <SemsmChat {...props} />}
+                />
+                <Route
+                    path="/tree"
+                    render={(props) => <SemsmVisualTreeView {...props} />}
                 />
                 {/* <Route
                     path="/semsm-bot"

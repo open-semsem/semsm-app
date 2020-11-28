@@ -82,6 +82,7 @@ function AppNavbar() {
   
   const mainList = [
     { name: t('menu_home'), url: "" },
+    { name: t('menu_tree'), url: "tree" },
     // { name: t('menu_feature'), url: "#feature" },
     // { name: t('menu_pricing'), url: "#pricing" },
     // { name: t('menu_about'), url: "#about" },
